@@ -30,16 +30,17 @@ export function Banner(BannerProps) {
    }, [number])
  
    const titles = [
-      <> 
-      <Flex display='inline'>Veja portas se abrirem para você e sua família com a</Flex> 
-      <Flex display='inline' color='clubMaldivas'> Cidadania Portuguesa </Flex> 
-      </>,
-      <Flex display='inline'>
-      Muitos brasileiros 
+      <Flex key='0' display='inline'> 
+         <Flex display='inline'>Veja portas se abrirem para você e sua família com a</Flex> 
+         <Flex display='inline' color='clubMaldivas'> Cidadania Portuguesa </Flex> 
+      </Flex>  ,
+      <Flex key='1' display='inline'>
+         Muitos brasileiros 
       <Flex display='inline' color='clubMaldivas'> não sabem </Flex> 
-      que têm direito à Nacionalidade Portuguesa! 
+         que têm direito à Nacionalidade Portuguesa! 
       </Flex>,
-      <Flex display='inline'>Quer saber como conseguir a 
+      <Flex key='2' display='inline'>
+         Quer saber como conseguir a 
       <Flex display='inline' color='clubMaldivas'>  Cidadania Portuguesa? </Flex> 
       </Flex>,
    ]

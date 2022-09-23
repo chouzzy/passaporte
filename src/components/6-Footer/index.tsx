@@ -127,12 +127,16 @@ const {
                   <InputGroup>
                   <Input type='tel' w='100px' minLength={2} maxLength={3} placeholder='DDD' {...register("ddd")} />
                   <Input type='tel' minLength={8} maxLength={9} placeholder='Ex: 912345678 ou 23456789' {...register("Numero")} />
-                  <InputRightElement pointerEvents='none' children={<BsTelephoneFill fontSize='1.1rem' color='gray' />}/>
+                  <InputRightElement pointerEvents='none'>
+                     <BsTelephoneFill fontSize='1.1rem' color='gray' />
+                  </InputRightElement>
                   </InputGroup>
 
                   <FormLabel fontWeight='400' pl={2} pt={4} mb={0} htmlFor='e-mail'> {formData.email}</FormLabel>
                   <InputGroup>
-                  <InputLeftElement pointerEvents='none' children={<IoIosMail fontSize='1.4rem' color='gray' />}/>
+                  <InputLeftElement pointerEvents='none'>
+                     <IoIosMail fontSize='1.4rem' color='gray' />
+                  </InputLeftElement>
                   <Input type='mail' placeholder='Digite seu e-mail' {...register("Email")} />
                   </InputGroup>
 
