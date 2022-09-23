@@ -1,0 +1,34 @@
+import { Box, Container, Image } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { Navbar } from "../../1-Navbar";
+import { Banner } from "../Banner";
+import { ServicePage } from "../ServicePage";
+import { SubHomepage } from "../SubHomepage";
+
+interface HomepageProps {
+   serviceOn: any,
+   backPage?():any,
+   servicePageData?:{
+      title:string,
+      text:string,
+      serviceImage:string
+   }
+}
+
+export function Homepage({serviceOn, backPage, servicePageData}:HomepageProps) { 
+   // useEffect( () => alert('Site em construção 🚜'),[])
+   const [background, setBackground] = useState('bg1')
+   const backgrounds = ['bg1', 'bg2', 'bg3']
+   return (
+      <>
+         <Container id='#Home' maxW='100vw' minH={'100vh'} bg='clubDark' bgImage={`static/img/${background}.png`} bgPosition='center' bgSize='cover' p='0' m='0' centerContent>
+         <Navbar/>
+         {serviceOn? <Banner bgBanner={backgrounds} bgState={setBackground}/> 
+         :
+         <ServicePage servicePageData={servicePageData} backPage={backPage}/>
+         }
+            
+         </Container> 
+      </>
+   )
+}

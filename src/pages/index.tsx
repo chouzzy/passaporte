@@ -1,0 +1,57 @@
+import { Box, Button, Heading, Text } from "@chakra-ui/react";
+import Head from "next/head";
+import { useState, useEffect } from "react";
+import { Navbar } from "../components/1-Navbar";
+import { InitialHome } from "../components/2-Homepage";
+import { Homepage } from "../components/2-Homepage/Homepage";
+import { Services } from "../components/3-Services";
+import { About } from "../components/5-About";
+import { Footer } from "../components/6-Footer";
+
+
+export default function Home() {
+
+  function HomeBase() {
+    return (
+      <>
+        <InitialHome serviceOn={true}/>
+        <Services changePage={changePage}/>
+        <About/>
+      </>
+    )
+  }
+  const [page, setPage] = useState(HomeBase);
+  
+  
+  function changePage(lineData) {
+    console.log('oii')
+    setPage(ServiceItem(lineData))
+  }
+  function backPage() {
+    setPage(HomeBase)
+  }
+
+  function ServiceItem(lineData?) {
+    console.log('service item agora')
+    console.log(lineData)
+    return (
+      <Homepage servicePageData={lineData} backPage={backPage} serviceOn={false}/>
+      )
+  }
+
+
+
+  return (
+    <>
+    <Head>
+      <title>Clube do Passaporte</title>
+    </Head>
+    {page}
+    <Footer/>
+    {/* // Homepage basica até o Como conseguir a Cidadania Portuguesa? - botão descubra se é elegivel indo para contacts
+    // serviços (nacionalidade e visto)
+    // feedbacks
+    // About com nossa missão e clube do passaporte é uma empresa */}
+    </>
+  )
+}
