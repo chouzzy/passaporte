@@ -1,14 +1,17 @@
-import { useBreakpointValue, Grid, GridItem,Link, Image, HStack, Flex, Text, VStack} from "@chakra-ui/react"
+import { useBreakpointValue, Grid, GridItem,Link, Image, HStack, Flex, Text, VStack, useColorModeValue} from "@chakra-ui/react"
 import { ModalMenu } from "./Modal";
 import { BsInstagram } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
 import { GrLinkedin } from "react-icons/gr";
 import { NavItem } from "./NavItem";
 import { useState, useEffect } from "react";
-import { FaFacebookF } from "react-icons/fa";
+import {ArrowCircleDown} from "phosphor-react";
+import { useDisclosure, MenuItem, Menu, MenuButton, MenuList} from "@chakra-ui/react"
+
 
 export function Navbar() {
    const [whatsNumber, setWhatsNumber] = useState('11912304030')
+   const { isOpen, onOpen, onClose } = useDisclosure()
    // useEffect(() => {
    //    const fetchWhatsNumber = async () => {
    //       await fetch('/api/random', {method:'get'})
@@ -31,8 +34,10 @@ export function Navbar() {
 
    const navItems= [
    {id:'#Home', text:'Home', active:'active'},
-   {id:'#services', text:'Serviços'},
    {id:'#quemSomos', text:'Quem somos'},
+   {id:'#services', text:'Serviços'},
+   {id:'#feedbacks', text:'Referências'},
+   {id:'#namidia', text:'Na Mídia'},
    {id:'#contato', text:'Contato'}]
 
    let socialMediaLinks = {
@@ -75,9 +80,36 @@ export function Navbar() {
             <GridItem colStart={[3,3,3,3,3]} mt={4} colEnd={[10,10,10,11,11]} >
             <HStack justifyContent='center' spacing={[0,0,0,4,16]} textTransform='uppercase' fontSize={'0.9rem'}>
                      {navItems.map(item => {
-                        return (
-                           <NavItem key={item.text} id={item.id} text={item.text} activeClass={item.active}/>
-                        )
+                        if (item.id == '#services') {
+                           return (
+                              <Menu isOpen={isOpen}>
+                              <MenuButton
+                                  mx={1}
+                                  py={[1, 2, 2]}
+                                  px={4}
+                                  borderRadius={5}
+                                  aria-label="Courses"
+                                  fontWeight="normal"
+                                  onMouseEnter={onOpen}
+                                  onMouseLeave={onClose}
+                              >
+                                  {item.text} {isOpen ? <ArrowCircleDown /> : <ArrowCircleDown />}
+                              </MenuButton>
+                              <MenuList bg='green' onMouseEnter={onOpen} onMouseLeave={onClose}>
+                                  <MenuItem>Menu Item 1</MenuItem>
+                                  <MenuItem>Menu Item 2</MenuItem>
+                                  <MenuItem>Menu Item 3</MenuItem>
+                              </MenuList>
+                          </Menu>
+                           )
+                        } else {
+                           return (
+                           <>
+                              <NavItem key={item.text} id={item.id} text={item.text} 
+                              activeClass={item.active}/>
+                           </>
+                           )
+                        }
                      })}
                   
                </HStack>
@@ -85,11 +117,9 @@ export function Navbar() {
 
             <GridItem colStart={[10,10,10,11,11]} colEnd={13}>
                <HStack justifyContent='center' alignItems='baseline' spacing={2} fontSize='1.2rem' color='clubAqua'>
-                  <Link _hover={{color: "clubAquaClean"}} href={socialMediaLinks.facebook}> <FaFacebookF/> </Link>
                   <Link _hover={{color: "clubAquaClean"}} href={socialMediaLinks.instagram}> <BsInstagram /> </Link>
-                  <Link  _hover={{color: "clubAquaClean"}} href={socialMediaLinks.linkedin}> <GrLinkedin/> </Link>
                   <Link className='zap-tag' _hover={{color:'clubAquaClean', transition:'200ms'}} color='#6cd474'fontSize='1.3rem' href={socialMediaLinks.whatsapp}> <RiWhatsappFill/> </Link>
-               </HStack >
+               </HStack>
             </GridItem>
 
             {/* <GridItem colStart={11} colEnd={13} mb={2}>

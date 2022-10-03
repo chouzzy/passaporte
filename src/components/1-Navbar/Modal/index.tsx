@@ -29,13 +29,13 @@ export function ModalMenu(ModalMenuProps) {
 
                   {ModalMenuProps.navItems.map( item => {
                      return (
-                        <NavItem key={item.id} id={item.id} text={item.text} activeClass={item.active} navColor={item.color}/>
+                        <>
+                           <NavItem key={item.id} id={item.id} text={item.text} activeClass={item.active} navColor={item.color}/>
+                        </>
                      )
                   })}
                   <HStack p={2} fontSize='1.6rem' spacing={3} textAlign='center' borderTop='1px solid #7cc3bb' w='36vw' justifyContent='center'>
                         <SocialMedia mediaColor='gray.50' icon={<BsInstagram/>} mediaLink={ModalMenuProps.mediaLinks.instagram}/>
-                        <SocialMedia mediaColor='gray.50' icon={<ImFacebook2/>} mediaLink={ModalMenuProps.mediaLinks.facebook}/>
-                        <SocialMedia mediaColor='gray.50' icon={<SiLinkedin/>} mediaLink={ModalMenuProps.mediaLinks.linkedin}/>
                         <SocialMedia tag='zap-tag' mediaColor='gray.50' icon={<RiWhatsappFill/>} mediaLink={ModalMenuProps.mediaLinks.whatsapp}/>
                   </HStack>
                </VStack>
