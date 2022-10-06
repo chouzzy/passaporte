@@ -29,9 +29,9 @@ export function ModalMenu(ModalMenuProps) {
 
                   {ModalMenuProps.navItems.map( item => {
                      return (
-                        <>
+                        
                            <NavItem key={item.id} id={item.id} text={item.text} activeClass={item.active} navColor={item.color}/>
-                        </>
+                        
                      )
                   })}
                   <HStack p={2} fontSize='1.6rem' spacing={3} textAlign='center' borderTop='1px solid #7cc3bb' w='36vw' justifyContent='center'>

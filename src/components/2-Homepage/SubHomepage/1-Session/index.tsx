@@ -14,7 +14,7 @@ const firstSessionData = {
 
 export function FirstSession() {
    return (
-      <Flex mt={12} flexDir={['column','column','row', 'row']}  w='100%' alignItems='center'>
+      <Flex  flexDir={['column','column','row', 'row']}  w='100%' alignItems='center'>
 
          <Flex flexDir={'column'} w='100%' textAlign='left' gap={8} p={[6,8,12]} color='whiteAlpha.800'>
             <Heading fontSize='1.8rem' fontWeight='300' color='clubAqua'>
@@ -36,3 +36,4 @@ export function FirstSession() {
       </Flex>
    )
 }
+

@@ -17,13 +17,13 @@ interface HomepageProps {
 
 export function Homepage({serviceOn, backPage, servicePageData}:HomepageProps) { 
    // useEffect( () => alert('Site em construção 🚜'),[])
-   const [background, setBackground] = useState('bg1')
-   const backgrounds = ['bg1', 'bg2', 'bg3']
+   // const [background, setBackground] = useState('bg1')
+   // const backgrounds = ['bg1', 'bg2', 'bg3']
    return (
       <>
-         <Container id='#Home' maxW='100vw' minH={'100vh'} bg='clubDark' bgImage={`static/img/test/${background}.png`} bgPosition='center' bgSize='cover' p='0' m='0' centerContent>
+         <Container id='#Home' maxW='100vw' minH={'100vh'} bg='clubDark' p='0' m='0' centerContent>
          <Navbar/>
-         {serviceOn? <Banner bgBanner={backgrounds} bgState={setBackground}/> 
+         {serviceOn? <Banner/> 
          :
          <ServicePage servicePageData={servicePageData} backPage={backPage}/>
          }

@@ -2,10 +2,9 @@ import { useBreakpointValue, Grid, GridItem,Link, Image, HStack, Flex, Text, VSt
 import { ModalMenu } from "./Modal";
 import { BsInstagram } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
-import { GrLinkedin } from "react-icons/gr";
 import { NavItem } from "./NavItem";
 import { useState, useEffect } from "react";
-import {ArrowCircleDown} from "phosphor-react";
+import {CaretDown} from "phosphor-react";
 import { useDisclosure, MenuItem, Menu, MenuButton, MenuList} from "@chakra-ui/react"
 
 
@@ -40,12 +39,18 @@ export function Navbar() {
    {id:'#namidia', text:'Na Mídia'},
    {id:'#contato', text:'Contato'}]
 
-   let socialMediaLinks = {
-      'instagram':'https://www.instagram.com/lindacortintas/',
-      'facebook':'https://www.facebook.com/Lindacor-Tintas-104622232176385',
-      'linkedin':'https://www.linkedin.com/company/lindacor-tintas/',
-      'whatsapp':`https://wa.me/${whatsNumber}?text=Olá, tudo bem? Acessei o site do Clube do Passaporte e gostaria de falar com um atendente.`
-   }
+   let socialMediaLinks = [
+      {id:"instagram", instagram:'https://www.instagram.com/lindacortintas/'},
+      {id:"facebook", facebook:'https://www.facebook.com/Lindacor-Tintas-104622232176385'},
+      {id:"linkedin", linkedin:'https://www.linkedin.com/company/lindacor-tintas/'},
+      {id:"whatsapp", whatsapp:`https://wa.me/${whatsNumber}?text=Olá, tudo bem? Acessei o site do Clube do Passaporte e gostaria de falar com um atendente.`},
+   ]
+
+   const services = [
+      {id:0, name:'Vistos'},
+      {id:1, name:'Cidadania via direta'},
+      {id:2, name:'Cidadania via sefardita'},
+   ]
 
    return (
       <Flex w='100%' position='fixed' zIndex={1}>
@@ -63,18 +68,21 @@ export function Navbar() {
          >
 
          <GridItem mr={['auto','','','','auto']} ml={[6,6,12,12]} colStart={[0,0,1,1,1]} colEnd={[0,0,3,3,3]}>
+         
+         <Link href='/' _hover={{textDecoration:'none'}}>
             <HStack alignItems='center'>
-               <Image mx='auto' src='static/img/logo no text.png' maxW={10} alt='Logo do Clube do Passaporte'/>
-
+               <Image mx='auto' src='static/img/logo branco.png' maxW={10} alt='Logo do Clube do Passaporte'/>
                <VStack spacing={-2} textTransform='uppercase'>
-                  <Text fontSize='0.8rem'  fontWeight='400' mr='auto' color='clubCigar' textShadow='1px 1px 1px #00000050'> Clube do</Text>
+                  <Text fontSize='0.8rem'  fontWeight='400' mr='auto' color='white' textShadow='1px 1px 1px #00000050'> Clube do</Text>
                   <Text fontSize='1rem' fontWeight='400' color='clubAqua' textShadow='1px 1px 1px #00000050'> Passaporte</Text>
                </VStack>
             </HStack>
+         </Link>
+
          </GridItem>
 
          {isMobile?
-            <ModalMenu mediaLinks={socialMediaLinks} navItems={navItems}/>
+            <ModalMenu key={navItems} mediaLinks={socialMediaLinks} navItems={navItems}/>
          : 
          <>
             <GridItem colStart={[3,3,3,3,3]} mt={4} colEnd={[10,10,10,11,11]} >
@@ -82,32 +90,44 @@ export function Navbar() {
                      {navItems.map(item => {
                         if (item.id == '#services') {
                            return (
-                              <Menu isOpen={isOpen}>
+                              <Menu isOpen={isOpen} key={item.id}>
                               <MenuButton
+                                 textTransform='uppercase'
                                   mx={1}
-                                  py={[1, 2, 2]}
-                                  px={4}
-                                  borderRadius={5}
+                                  borderRadius={1}
                                   aria-label="Courses"
                                   fontWeight="normal"
                                   onMouseEnter={onOpen}
                                   onMouseLeave={onClose}
                               >
-                                  {item.text} {isOpen ? <ArrowCircleDown /> : <ArrowCircleDown />}
+                                  <Flex justify='center' align='center' gap={1} >
+                                    <Text display='inline'>
+                                       {item.text} 
+                                    </Text>
+                                    {isOpen ? <CaretDown color='#4ca7a1' /> : <CaretDown />}   
+                                 </Flex>
+
                               </MenuButton>
-                              <MenuList bg='green' onMouseEnter={onOpen} onMouseLeave={onClose}>
-                                  <MenuItem>Menu Item 1</MenuItem>
-                                  <MenuItem>Menu Item 2</MenuItem>
-                                  <MenuItem>Menu Item 3</MenuItem>
+                              <MenuList bg='clubBlack' borderRadius={1} borderColor='clubMaldivas' onMouseEnter={onOpen} onMouseLeave={onClose} textTransform='uppercase'>
+                                  {services.map(item => {
+                                     return (
+                                       <MenuItem fontWeight={300} fontSize='0.8rem' letterSpacing={0.5} color='white' key={item.id} textTransform='uppercase' _hover={{bg:'clubCigar'}}>
+
+                                          <Flex _hover={{color:'white'}}>
+                                             <Flex w='2px' bg='clubMaldivas' mr={2}></Flex>
+                                             <Text display='inline'> {item.name} </Text>
+                                          </Flex>
+
+                                       </MenuItem>
+                                    )
+                                  })}
                               </MenuList>
                           </Menu>
                            )
                         } else {
                            return (
-                           <>
                               <NavItem key={item.text} id={item.id} text={item.text} 
                               activeClass={item.active}/>
-                           </>
                            )
                         }
                      })}
@@ -117,8 +137,8 @@ export function Navbar() {
 
             <GridItem colStart={[10,10,10,11,11]} colEnd={13}>
                <HStack justifyContent='center' alignItems='baseline' spacing={2} fontSize='1.2rem' color='clubAqua'>
-                  <Link _hover={{color: "clubAquaClean"}} href={socialMediaLinks.instagram}> <BsInstagram /> </Link>
-                  <Link className='zap-tag' _hover={{color:'clubAquaClean', transition:'200ms'}} color='#6cd474'fontSize='1.3rem' href={socialMediaLinks.whatsapp}> <RiWhatsappFill/> </Link>
+                  <Link _hover={{color: "clubAquaClean"}} href={socialMediaLinks[0].instagram}> <BsInstagram /> </Link>
+                  <Link className='zap-tag' _hover={{color:'clubAquaClean', transition:'200ms'}} color='#6cd474'fontSize='1.3rem' href={socialMediaLinks[3].whatsapp}> <RiWhatsappFill/> </Link>
                </HStack>
             </GridItem>
 

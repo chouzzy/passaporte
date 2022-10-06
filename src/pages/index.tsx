@@ -5,7 +5,6 @@ import { Navbar } from "../components/1-Navbar";
 import { InitialHome } from "../components/2-Homepage";
 import { Homepage } from "../components/2-Homepage/Homepage";
 import { Services } from "../components/3-Services";
-import { About } from "../components/5-About";
 import { Footer } from "../components/6-Footer";
 
 
@@ -16,7 +15,6 @@ export default function Home() {
       <>
         <InitialHome serviceOn={true}/>
         <Services changePage={changePage}/>
-        <About/>
       </>
     )
   }
@@ -24,7 +22,6 @@ export default function Home() {
   
   
   function changePage(lineData) {
-    console.log('oii')
     setPage(ServiceItem(lineData))
   }
   function backPage() {
@@ -32,7 +29,6 @@ export default function Home() {
   }
 
   function ServiceItem(lineData?) {
-    console.log('service item agora')
     console.log(lineData)
     return (
       <Homepage servicePageData={lineData} backPage={backPage} serviceOn={false}/>

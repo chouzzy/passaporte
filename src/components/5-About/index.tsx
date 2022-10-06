@@ -5,20 +5,18 @@ const firstSessionData = {
    title:'Quem somos',
    history:
       <>
-      <Text fontSize='0.9rem' fontWeight='400' lineHeight={1.5}>O Clube do Passaporte é uma empresa criada em 2017 pelo advogado Itay Mor, em Tel Aviv – Israel. <br></br>
-      No Brasil, o Clube do Passaporte foi criado com um grande amor por Portugal e pelas portas que abrem a muitos – idealmente a todos – os descendentes de judeus sefarditas e cristãos novos. <br></br>
-      Quem conhece Portugal por seus locais turísticos e cartões postais já conhece sua beleza e a maravilhosa energia e cultura que oferece. <br></br>
-      Agora, nosso objetivo é ajudar você, a sua família e todos os descendentes de judeus portugueses e espanhóis afetados pela Inquisição a conseguirem a nacionalidade local e os inúmeros direitos que ela permite, uma verdadeira garantia de segurança para o futuro. <br></br>
-      </Text>
-      <Text fontSize='0.9rem' fontWeight='400'>
-      Nossos escritórios operam atualmente em 3 ramos internacionais: <br></br>
-      Port Pass Club - Israel <br></br>
-      O Clube do Passaporte - Portugal <br></br>
-      Clube do Passaporte - Brasil <br></br>
+      <Text fontSize='0.8rem' fontWeight='300' lineHeight={1.5}>
+         O Clube do Passaporte é um escritório migratório conceituado, com profissionais gabaritados, um espírito jovem e inovador. Acreditamos na desburocratização total dos processos para os nossos clientes, de modo a resolver as questões referentes à nacionalidade portuguesa de forma eficaz, precisa e transparente. Além disso, cuidamos dos processos de A a Z, com intuito de chegar ao resultado desejado rapidamente e sem qualquer trabalho para o cliente. <br></br> <br></br> Não obstante,  prezamos por sempre manter um canal de comunicação direto e aberto com o cliente com intuito de garantir segurança e tranquilidade  durante o  decorrer de nosso serviço.
       </Text>
       </>,
-   missionTitle:'Nossa missão',
-   mission:<Text fontSize='0.9rem' fontWeight='400'>Nossa missão é permitir que o maior número possível de pessoas consiga acessar a <b style={{color:'#4ca7a1'}}>melhor qualidade de vida e criar caminhos </b>que permitem estudar, trabalhar e investir no exterior, especialmente em Portugal.</Text>,
+   missionTitle:'Missão',
+   mission:<Text fontSize='0.8rem' fontWeight='300'>
+      Ajudar o máximo de pessoas na busca de <b style={{color:'#4ca7a1'}}> novas oportunidades de vida </b>- tanto profissionais quanto pessoais - em solo português e europeu. 
+      </Text>,
+   valuesTitle:'Valores',
+   values:<Text fontSize='0.8rem' fontWeight='300'>
+      Inovação, eficiência, agilidade, transparência, foco no cliente e zelo pelos processos que estão sob nossa <b style={{color:'#4ca7a1'}}> responsabilidade. </b> 
+      </Text>,
    list:[
    "Morar em qualquer país da União Europeia",
    "Trabalhar na Europa sem precisar de visto",
@@ -31,28 +29,33 @@ const firstSessionData = {
 export function About() {
    return (
 
-      <Flex id='#quemSomos' w='100%' flexDir='column' py={8} px={2}>
+      <Flex id='#quemSomos'w='100%' flexDir='column' py={[8,0,0,0]} px={[2,0,0,0]} color='gray.50'>
          {/* <Flex w='100%'>
-            <Heading mx='auto' fontWeight='300' fontSize='1.8rem' color='clubAqua'> {firstSessionData.title} </Heading>
+            <Heading mx='auto' fontWeight='300' fontSize='1.6rem' color='clubAqua'> {firstSessionData.title} </Heading>
          </Flex> */}
       
-         <Flex flexDir={['column','column','row', 'row']}  w='100%' alignItems='center'>
+         <Flex flexDir={['column','column','row', 'row']}  w='100%' alignItems='center' color='whiteAlpha.800'>
 
-            <Flex w='50%' p={[4,8,12]}>
-               <Image mx='auto' maxW={['','80%','80%','80%']} src='static/img/logo.png'/>
-            </Flex>
-
-            <Flex flexDir={'column'} w='100%' textAlign='left' gap={2} p={[8]}>
-               <Heading fontSize='1.8rem' fontWeight='300' color='clubAqua'>
+            <Flex flexDir={'column'} w='100%' textAlign='left' gap={2} p={[6,8,16]}>
+               <Heading fontSize='1.6rem' fontWeight='300' color='clubAqua'>
                   {firstSessionData.title}
                </Heading> 
-
                   {firstSessionData.history}
-               <Heading mt={4} fontSize='1.8rem' fontWeight='300' color='clubAqua'>
+               <Heading mt={4} fontSize='1.6rem' fontWeight='300' color='clubAqua'>
                   {firstSessionData.missionTitle}
                </Heading> 
-
                   {firstSessionData.mission}
+               <Heading mt={4} fontSize='1.6rem' fontWeight='300' color='clubAqua'>
+                  {firstSessionData.valuesTitle}
+               </Heading> 
+                  {firstSessionData.values}
+            </Flex>
+            
+            <Flex w='100%'>
+               <Image mx='auto' 
+               bgGradient='linear(135deg, white, whiteAlpha.800)'
+               boxShadow={"2xl"}
+               p={4} borderRadius={24} maxW={'100%'} src='static/img/logo.png'/>
             </Flex>
          </Flex>
       </Flex>

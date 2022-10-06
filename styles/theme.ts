@@ -10,6 +10,7 @@ export const theme = extendTheme({
      clubAqua:"#1c928b",
      clubAquaClean:"#7cc3bb",
      clubDark:'#343434',
+     clubBlack:'#202020',
      clubMoss:"#356561",
      clubCigar:"#637776",
      clubMaldivas:"#4ca7a1"

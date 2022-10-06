@@ -7,22 +7,10 @@ interface NationalityProps {
 
 export function Nationality({changePage}: NationalityProps) { 
    const lines = [
-   {image:'static/img/nat-1.jpg', name:'Serviço 1', cols:[4,4,2,2], 
+   {image:'static/img/sefarad.jpg', name:'Sefardita', cols:[4,4,2,2], 
    lineData:{title: 'Título 1 - What is Lorem Ipsum?', text: 'texto 1 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-1.jpg'}},
-   {image:'static/img/nat-2.jpg', name:'Serviço 2', cols:[4,4,2,2], 
+   {image:'static/img/passport.jpg', name:'Via Direta', cols:[4,4,2,2], 
    lineData:{title: 'Título 2 - What is Lorem Ipsum?', text: 'texto 2 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-2.jpg'}},
-   {image:'static/img/nat-3.jpg', name:'Serviço 3', cols:[4,4,2,2], 
-   lineData:{title: 'Título 3 - What is Lorem Ipsum?', text: 'texto 3 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-3.jpg'}},
-   {image:'static/img/nat-4.jpg', name:'Serviço 4', cols:[4,4,2,2], 
-   lineData:{title: 'Título 4 - What is Lorem Ipsum?', text: 'texto 4 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-4.jpg'}},
-   {image:'static/img/nat-5.jpg', name:'Serviço 5', cols:[4,4,2,2], 
-   lineData:{title: 'Título 5 - What is Lorem Ipsum?', text: 'texto 5 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-5.jpg'}},
-   {image:'static/img/nat-6.jpg', name:'Serviço 6', cols:[4,4,2,2], 
-   lineData:{title: 'Título 6 - What is Lorem Ipsum?', text: 'texto 6 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-6.jpg'}},
-   {image:'static/img/nat-7.jpg', name:'Serviço 7', cols:[4,4,2,2], 
-   lineData:{title: 'Título 7 - What is Lorem Ipsum?', text: 'texto 7 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-7.jpg'}},
-   {image:'static/img/nat-8.jpg', name:'Serviço 8', cols:[4,4,2,2], 
-   lineData:{title: 'Título 8 - What is Lorem Ipsum?', text: 'texto 8 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-8.jpg'}},
 ]
 
    const textData = {
@@ -55,7 +43,7 @@ export function Nationality({changePage}: NationalityProps) {
          
          <SimpleGrid
          textAlign='center'
-         columns={8}
+         columns={4}
          p={[4,4,4,12]}
          gap={[4,4,8,12]}
          >
