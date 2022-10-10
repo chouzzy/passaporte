@@ -21,7 +21,7 @@ export function Homepage({serviceOn, backPage, servicePageData}:HomepageProps) {
    // const backgrounds = ['bg1', 'bg2', 'bg3']
    return (
       <>
-         <Container id='#Home' maxW='100vw' minH={'100vh'} bg='clubDark' p='0' m='0' centerContent>
+         <Container id='#Home' maxW='100vw' bg='clubDark' p='0' m='0' centerContent>
          <Navbar/>
          {serviceOn? <Banner/> 
          :

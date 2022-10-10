@@ -30,7 +30,7 @@ const links = [
     'https://www.gazetasp.com.br/mundo/como-se-mudar-para-portugal-um-guia-para-quem-busca-cidadania/1111712/',
 ]
 
-const namidiaTitle =  <Heading mx='auto' fontWeight='300' fontSize='1.6rem' color='gray.50'> 
+const namidiaTitle =  <Heading mx='auto' fontWeight='300' fontSize='1.6rem' color='gray.50' textTransform='uppercase'> 
             Na <b style={{color:'#1c928b'}}> mídia</b>
             </Heading>
 

@@ -1,13 +1,14 @@
 import { GridItem, Link, Text } from "@chakra-ui/react";
+import {Link as Slink} from 'react-scroll'
 
 interface LineItemProps {
    LineImage:string,
    LineName:string,
    columns:number[],
    lineData:{
-      title:string,
-      text:string,
-      serviceImage:string
+      title:any,
+      text:any,
+      serviceImage:any
    }
    changePage: (lineData:any) => void
 }
@@ -19,8 +20,9 @@ export function LineItem({LineImage, LineName, columns, lineData, changePage}:Li
    }
    return (
          
-         
-            <GridItem onClick={passLineData} _hover={{border:'1px solid #4ca7a1', transition:'400ms', boxShadow:'dark-lg', color:'gray.300'}} cursor='pointer' colSpan={columns} mx='auto' borderRadius={2} w='100%' 
+      <GridItem w='100%' colSpan={columns} cursor='pointer'>
+         <Slink to={'#Home'}>
+            <GridItem onClick={passLineData} _hover={{border:'1px solid #4ca7a1', transition:'400ms', boxShadow:'dark-lg', color:'gray.300'}} mx='auto' borderRadius={2} w='100%' 
             boxShadow='md' bgImage={LineImage} bgSize='cover' minH={96}
             bgPosition='center' position='relative' color='white'>
 
@@ -30,5 +32,7 @@ export function LineItem({LineImage, LineName, columns, lineData, changePage}:Li
                </Text>
 
             </GridItem>
+         </Slink>
+      </GridItem>
    )
 }
