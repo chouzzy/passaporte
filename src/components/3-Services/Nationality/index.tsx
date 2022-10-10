@@ -55,6 +55,7 @@ export function Nationality({changePage}: NationalityProps) {
       <>
       
       <Flex
+      id='#nationality'
       w='100%'
       fontFamily='Heebo'
       bgRepeat='repeat-x'

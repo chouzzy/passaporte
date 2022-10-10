@@ -27,11 +27,13 @@ export function ServicePage( {servicePageData, backPage}:ServicePageProps) {
 
             <Flex w='100%' flexDir={['column','column','row', 'row']} p={8}>
                
-               <Flex w={['100%','100%','70%','50%']} h={[80,80,'','']} borderRadius={4} align={['center','center','flex-start','center','']} justifyContent='center' bgImage={servicePageData.serviceImage} bgPosition='center' bgSize='cover'  borderLeft={'1px solid #34343450'}>
+               <Flex w={['100%','100%','70%','50%']} h={[80,80,'','']} borderRadius={4} align={['center','center','flex-start','center','']} justifyContent='center' bgImage={servicePageData.serviceImage} bgPosition='center' bgSize='cover'>
                </Flex>
                
-               <Flex w='100%' flexDir='column' h='100%'  px={[2,2,4,8]}>
-                  <VStack gap={6} textAlign={['left','left','left','left']} px={8}  borderLeft={'1px solid #34343450'}>
+               <Flex w='100%' flexDir='column' h='100%' px={[0,0,4,8]} py={[8,8,0,0]}>
+                  <VStack gap={6} textAlign={['left','left','left','left']} px={[0,0,8,8]} 
+                  borderLeft={['','','1px solid #34343450','1px solid #34343450']}
+                  >
                      <Heading fontWeight='400' w='100%' fontSize='1.6rem' textAlign={'left'}> 
                         {servicePageData.title} 
                      </Heading>

@@ -30,13 +30,13 @@ const lines = [
     const slides = useBreakpointValue({ base: 1, sm: 2, md: 2, lg: 3, xl: 3 })
     
     return (
-      <Flex id='#quemSomos'w='100%' bg='white' flexDir='column' py={[8,0,0,8]} px={[2,0,0,0]} color='gray.50'>
+      <Flex id='#quemSomos'w='100%' bg='white' flexDir='column' gap={8} py={[8,0,0,8]} px={[8,8,8,8]} color='gray.50'>
          <Flex w='100%'>
             {feedbackTitle}
          </Flex>
       
          <Flex flexDir={['column','column','row', 'row']} zIndex={0} w='100%' alignItems='center' color='whiteAlpha.800'>
-                <Flex maxW={'100%'} p={8}>
+                <Flex maxW={'100%'}>
                     <Swiper
                     spaceBetween={24}
                     slidesPerView={slides}

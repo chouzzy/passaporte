@@ -6,6 +6,7 @@ import { NavItem } from "./NavItem";
 import { useState, useEffect } from "react";
 import {CaretDown} from "phosphor-react";
 import { useDisclosure, MenuItem, Menu, MenuButton, MenuList} from "@chakra-ui/react"
+import {Link as Slink} from 'react-scroll'
 
 
 export function Navbar() {
@@ -47,9 +48,9 @@ export function Navbar() {
    ]
 
    const services = [
-      {id:0, name:'Vistos'},
-      {id:1, name:'Cidadania via direta'},
-      {id:2, name:'Cidadania via sefardita'},
+      {id:'#visa', name:'Vistos'},
+      {id:'#nationality', name:'Cidadania via direta'},
+      {id:'#nationality', name:'Cidadania via sefardita'},
    ]
 
    return (
@@ -108,15 +109,19 @@ export function Navbar() {
                                  </Flex>
 
                               </MenuButton>
+
                               <MenuList bg='clubBlack' borderRadius={1} borderColor='clubMaldivas' onMouseEnter={onOpen} onMouseLeave={onClose} textTransform='uppercase'>
+
                                   {services.map(item => {
                                      return (
                                        <MenuItem fontWeight={300} fontSize='0.8rem' letterSpacing={0.5} color='white' key={item.id} textTransform='uppercase' _hover={{bg:'clubCigar'}}>
 
+                                          <Slink to={item.id} spy={true} smooth={true} offset={-60} duration={500}>
                                           <Flex _hover={{color:'white'}}>
-                                             <Flex w='2px' bg='clubMaldivas' mr={2}></Flex>
-                                             <Text display='inline'> {item.name} </Text>
+                                                <Flex w='2px' bg='clubMaldivas' mr={2} display='inline'></Flex>
+                                                <Text display='inline'> {item.name} </Text>
                                           </Flex>
+                                          </Slink>
 
                                        </MenuItem>
                                     )

@@ -30,7 +30,7 @@ const links = [
     'https://www.gazetasp.com.br/mundo/como-se-mudar-para-portugal-um-guia-para-quem-busca-cidadania/1111712/',
 ]
 
-const namidiaTitle =  <Heading mx='auto' fontWeight='300' fontSize='1.6rem' color='gray.50' textTransform='uppercase'> 
+const namidiaTitle =  <Heading mx='auto' fontWeight='300' fontSize='1.6rem' color='gray.50' > 
             Na <b style={{color:'#1c928b'}}> mídia</b>
             </Heading>
 
@@ -51,7 +51,7 @@ const lines = [
 
  
  export function Namidia() {
-    const slides = useBreakpointValue({ base: 2, sm: 3, md: 4, lg: 5, xl: 5 })
+    const slides = useBreakpointValue({ base: 1, sm: 2, md: 4, lg: 5, xl: 5 })
     
     return (
       <Flex id='#namidia'w='100%' flexDir='column' py={[8,0,0,8]} px={[2,0,0,0]} color='gray.900'>
@@ -61,7 +61,7 @@ const lines = [
          </Flex>
       
          <Flex flexDir={['column','column','row', 'row']} zIndex={0} w='100%' alignItems='center' color='whiteAlpha.800'>
-                <Flex maxW={'100%'} p={8}>
+                <Flex maxW={'100%'} p={12}>
                     <Swiper
                     spaceBetween={12}
                     slidesPerView={slides}

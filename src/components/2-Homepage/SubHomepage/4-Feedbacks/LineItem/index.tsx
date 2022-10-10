@@ -19,7 +19,7 @@ interface LineItemProps {
 export function LineItem({image, text, subText}:LineItemProps) {
    return (
                <Flex mx='auto' bgImage={image} bgRepeat='no-repeat' bgSize={'contain'} bgColor='clubDark' bgPosition='center' borderRadius={6}
-               h={'380px'} position='relative' justifyContent='center' alignItems='center'>
+               h={[480,480,480,360]} position='relative' justifyContent='center' alignItems='center'>
 
                   <Grid w={'100.3%'} h='100%' position='absolute' p={4} color='gray.50'>
                      <VStack textAlign='left'>
