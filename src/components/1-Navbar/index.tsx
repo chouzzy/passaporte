@@ -50,7 +50,7 @@ export function Navbar() {
    const services = [
       {id:'#visa', name:'Vistos'},
       {id:'#nationality', name:'Cidadania via direta'},
-      {id:'#nationality', name:'Cidadania via sefardita'},
+      {id:'#nationality2', name:'Cidadania via sefardita'},
    ]
 
    return (
@@ -140,7 +140,7 @@ export function Navbar() {
                </HStack>
             </GridItem>
 
-            <GridItem colStart={[10,10,10,11,11]} colEnd={13}>
+            <GridItem colStart={[10,10,10,11,11]} colEnd={13} pt={4}>
                <HStack justifyContent='center' alignItems='baseline' spacing={2} fontSize='1.2rem' color='clubAqua'>
                   <Link _hover={{color: "clubAquaClean"}} href={socialMediaLinks[0].instagram}> <BsInstagram /> </Link>
                   <Link className='zap-tag' _hover={{color:'clubAquaClean', transition:'200ms'}} color='#6cd474'fontSize='1.3rem' href={socialMediaLinks[3].whatsapp}> <RiWhatsappFill/> </Link>

@@ -10,7 +10,7 @@ export function Footer() {
    const formData = {
       title:'SEJA UMA CONSULTORA',
       name:'Nome',
-      number:'Número',
+      number:'Telefone',
       email:'E-mail',
       buttonText:'Enviar'
    }
@@ -22,45 +22,63 @@ export function Footer() {
    let emailData = {}
 
    let [city, setCity] = useState('')
-   let [state, setState] = useState({'Estado':''})
+   let [service, setService] = useState('')
 
 useEffect(() => {
-   const fetchStates = async () => {
-     const statesList = await axios(
-       'https://servicodados.ibge.gov.br/api/v1/localidades/estados',
-     );
+   const fetchServices = async () => {
+     const servicesList = [
+      {name: 'Visto'},
+      {name: 'Cidadania'},
+      {name: 'Ainda não decidi'},
+     ]
 
-     let statesListPivot = []
+     let servicesListPivot = []
 
-     statesList.data.map(item => {
-         statesListPivot.push(item.sigla)})
-     setStates(statesListPivot.sort());
+     servicesList.map(item => {
+         servicesListPivot.push(item.name)})
+     setStates(servicesListPivot.sort());
    }
 
-   const fetchCities = async (state) => {
-   if (state !=( Object.keys(state).length === 0) ) {
-      const citiesList = await axios(
-         `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${state['Estado']}/municipios`,
-      );
-      let citiesListPivot = []
+   const fetchServiceTypes = async (service) => {
+   if (service !=( Object.keys(service).length === 0) ) {
+      let serviceTypeList = []
+      if (service == 'Visto') {
+         serviceTypeList = [
+            {name: 'Visto D1'},
+            {name: 'Visto D2'},
+            {name: 'Visto D3'},
+            {name: 'Visto D4'},
+            {name: 'Visto D5'},
+            {name: 'Visto D6'},
+            {name: 'Visto D7'}
+      ]} else if (service == 'Cidadania') {
+         serviceTypeList = [
+            {name: 'Via Direta'},
+            {name: 'Sefardita'},
+            {name: 'Ainda não decidi'},
+         ]
+      } else if (service == 'Ainda não decidi' ) {
+         serviceTypeList = [{name: 'Ainda não decidi'}]
+   }
+      let serviceTypeListPivot = []
 
-      citiesList.data.map(item => {
-          citiesListPivot.push(item.nome)})
-      setCities(citiesListPivot.sort());
+      serviceTypeList.map(item => {
+          serviceTypeListPivot.push(item.name)})
+      setCities(serviceTypeListPivot.sort());
    };
    }
 
-   fetchStates();
-   fetchCities(state)
- }, [state]);
+   fetchServices();
+   fetchServiceTypes(service)
+ }, [service]);
 
 useEffect( () => {
-   if ((state['Estado'] != '' )) {
+   if ((service != '' )) {
       setAble(false)
    } else {
       setAble(true)
    }
-}, [state])
+}, [service])
 
 const [disable, setDisable] = useState(false)
 const [color, setColor] = useState('clubMaldivas')
@@ -76,7 +94,7 @@ const {
    setDisable(true)
    setColor('clubCigar')
    setSentText('Enviado ✔')
-   emailData = {...values, ...state}
+   emailData = {...values, service}
    return new Promise(() => {
      setTimeout(() => {
       fetch('/api/mail', {
@@ -109,23 +127,23 @@ const {
 
             {/* MAPA */}
             <Flex w='100%' justifyContent='center' p={[8,8,16,16]} flexDir='column' gap={4}>
-
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49219.889364100636!2d-46.68089142617247!3d-23.52206389553647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef813d5a0e76d%3A0xc91f02336118f045!2sCT%20da%20Barra%20Funda%20(S%C3%A3o%20Paulo%20FC)!5e0!3m2!1spt-BR!2sbr!4v1663877682041!5m2!1spt-BR!2sbr" width="100%" height="400px" loading="lazy"/>
+               <iframe style={{outline:'3px solid #4ca7a1 '}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.949187259931!2d-46.6922740853838!3d-23.57026836780559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce570b2e36ff85%3A0x509c26d9fd87396f!2sAv.%20Brg.%20Faria%20Lima%2C%201485%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001452-002!5e0!3m2!1spt-BR!2sbr!4v1665495720920!5m2!1spt-BR!2sbr" width="100%" height="360px" loading="lazy"/>
                <VStack>
-                  <Text> Av. Marquês de São Vicente, 2724 - Barra Funda, São Paulo - SP, 05036-040</Text>
+                  <Text>Avenida Faria Lima 1485 - Torre Norte, 2º andar - Pinheiros, São Paulo - SP, 01452-002</Text>
                </VStack>
             </Flex>
 
             {/* FORM */}
-            <Flex w='100%'justifyContent='center' p={[8,8,16,16]}>
+            <Flex w='100%'justifyContent='center' px={[8,8,16,16]} py={[8,8,16,12]}>
             <FormControl isRequired>
                <form onSubmit={handleSubmit(onSubmit)}>
                   <FormLabel fontWeight='400' pl={2} pt={4} mb={0} htmlFor='first-name'> {formData.name}</FormLabel>
                   <Input p={2} placeholder='Digite seu nome' {...register("Nome")} />
                   
                   <FormLabel fontWeight='400' pl={2} pt={4} mb={0} htmlFor='telephone'> {formData.number}</FormLabel>
-                  <InputGroup>
-                  <Input type='tel' w='100px' minLength={2} maxLength={3} placeholder='DDD' {...register("ddd")} />
+                  <InputGroup gap={1}>
+                  <Input type='text' w='100px' minLength={2} maxLength={3} placeholder='DDI' p={2} {...register("ddi")} />
+                  <Input type='number' w='100px' minLength={2} maxLength={3} placeholder='DDD' p={2} {...register("ddd")} />
                   <Input type='tel' minLength={8} maxLength={9} placeholder='Ex: 912345678 ou 23456789' {...register("Numero")} />
                   <InputRightElement pointerEvents='none'>
                      <BsTelephoneFill fontSize='1.1rem' color='gray' />
@@ -140,15 +158,15 @@ const {
                   <Input type='mail' placeholder='Digite seu e-mail' {...register("Email")} />
                   </InputGroup>
 
-                  <FormLabel fontWeight='400' pl={2} pt={4} mb={0} htmlFor='e-mail'> Estado e Cidade</FormLabel>
+                  <FormLabel fontWeight='400' pl={2} pt={4} mb={0} htmlFor='e-mail'> Serviço desejado</FormLabel>
                   <InputGroup>
-                  <Select id='country'  _placeholder={{color:'#1c928b'}}  onChange={ (e) => setState({'Estado':e.target.value})}  placeholder='UF'>
+                  <Select id='country'  _placeholder={{color:'#1c928b'}}  onChange={ (e) => setService(e.target.value)}  placeholder='Selecione o tipo do serviço'>
                      {states.map(item => {
                         return (
                            <option style={{ color: 'black' }} key={item}>{item}</option>
                      )})}
                   </Select>
-                  <Select isDisabled={able} id='city' onChange={ (e) => setCity(e.target.value)} placeholder='Cidade' {...register("Cidade")}>
+                  <Select isDisabled={able} id='city' onChange={ (e) => setCity(e.target.value)} placeholder='Detalhe do serviço' {...register("Detalhe do serviço")}>
                         {cities.map(item => {
 
                            return (

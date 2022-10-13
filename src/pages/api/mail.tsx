@@ -5,13 +5,15 @@ export default async (req,res) => {
    console.log('conectamos na api')
    let sendTest = 0
    const body = JSON.parse(req.body)
+   console.log(body)
    
    const message = `
+   E-mail recebido via clubedopassaporte.com.br: \r\n\r\n
    Nome: ${body.Nome}\r\n
-   Número: (${body.ddd}) ${body.Numero}\r\n
+   Número: (${body.ddd}) ${body.Telefone}\r\n
    Email: ${body.Email}\r\n
-   Cidade: ${body.Cidade}\r\n
-   Estado: ${body.Estado}
+   Serviço desejado:: ${body.service}\r\n
+   Tipo de serviço: ${body['Detalhe do serviço']}\r\n
    `;
    const data = {
       to:'matheus@awer.co',

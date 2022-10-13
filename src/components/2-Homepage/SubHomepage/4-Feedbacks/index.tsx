@@ -27,10 +27,10 @@ const lines = [
 
  
  export function Feedbacks() {
-    const slides = useBreakpointValue({ base: 1, sm: 2, md: 2, lg: 3, xl: 3 })
+    const slides = useBreakpointValue({ base: 1, sm: 1, md: 2, lg: 3, xl: 3 })
     
     return (
-      <Flex id='#quemSomos'w='100%' bg='white' flexDir='column' gap={8} py={[8,0,0,8]} px={[8,8,8,8]} color='gray.50'>
+      <Flex id='#quemSomos'w='100%' bg='white' flexDir='column' gap={8} py={[8,8,8,8]} px={[8,8,8,8]} color='gray.50'>
          <Flex w='100%'>
             {feedbackTitle}
          </Flex>

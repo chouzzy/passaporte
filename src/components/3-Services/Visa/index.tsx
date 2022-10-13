@@ -1,4 +1,4 @@
-import { Box, Flex, SimpleGrid, GridItem, Heading, Image, Text, useBreakpointValue, VStack, Link } from "@chakra-ui/react";
+import { Box, Flex, SimpleGrid, GridItem, Heading, Image, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 import { LineItem } from "./LineItem";
 import {Link as Slink} from 'react-scroll'
 
@@ -90,7 +90,7 @@ export function Visa({changePage}: VisaProps) {
       Lembre-se, caso você ainda não possua trabalho em Portugal, não se preocupe! Portugal oferece agora outra excelente oportunidade para você,{' '}
 
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> 
-         <Slink  onClick={() => {changePage(linesBkp[1].lineData)}}> 
+         <Slink to={'#Home'} onClick={() => {changePage(linesBkp[1].lineData)}}> 
          clique aqui e saiba mais sobre o Visto para busca de trabalho!
          </Slink> 
       </Text>
@@ -123,7 +123,7 @@ export function Visa({changePage}: VisaProps) {
       Lembre-se, caso você não se encaixe nessa possibilidade, Portugal oferece agora outra excelente{' '}
 
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> 
-         <Slink onClick={() => {changePage(linesBkp[1].lineData)}}> 
+         <Slink to={'#Home'} onClick={() => {changePage(linesBkp[1].lineData)}}> 
           oportunidade para você.
          </Slink> 
       </Text>
@@ -138,7 +138,7 @@ export function Visa({changePage}: VisaProps) {
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}>Clique aqui e saiba mais!</Slink> </Text>
       <br></br><br></br>
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> 
-         <Slink onClick={() => {changePage(linesBkp[4].lineData)}}>
+         <Slink to={'#Home'} onClick={() => {changePage(linesBkp[4].lineData)}}>
             Se você já está estudando na Europa, o Visto D5 deve ser o ideal para você, clique para saber mais
          </Slink> 
       </Text>
@@ -156,7 +156,7 @@ export function Visa({changePage}: VisaProps) {
       </Text>
       <br></br><br></br>
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> 
-         <Slink onClick={() => {changePage(linesBkp[3].lineData)}}>
+         <Slink to={'#Home'} onClick={() => {changePage(linesBkp[3].lineData)}}>
             Caso você ainda esteja no Brasil, clique para saber mais sobre o visto D4.
          </Slink> 
       </Text>
