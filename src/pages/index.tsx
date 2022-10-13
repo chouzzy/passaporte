@@ -29,13 +29,10 @@ export default function Home() {
   }
 
   function ServiceItem(lineData?) {
-    console.log(lineData)
     return (
       <Homepage servicePageData={lineData} backPage={backPage} serviceOn={false}/>
       )
   }
-
-
 
   return (
     <>

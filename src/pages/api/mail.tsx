@@ -2,10 +2,8 @@ const mail = require('@sendgrid/mail')
 mail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export default async (req,res) => {
-   console.log('conectamos na api')
    let sendTest = 0
    const body = JSON.parse(req.body)
-   console.log(body)
    
    const message = `
    E-mail recebido via clubedopassaporte.com.br: \r\n\r\n
@@ -22,7 +20,6 @@ export default async (req,res) => {
       text: message,
       html: message.replace(/\r\n/g,'<br>')
    }
-   console.log("We're here")
 
    await mail.send(data).then((response) => {
       console.log(`tentativa ${sendTest}º: ${response[0].statusCode}`)
@@ -46,7 +43,6 @@ export default async (req,res) => {
       text: message2,
       html: message2.replace(/\r\n/g,'<br>')
    }
-   console.log("We're here 2")
 
    await mail.send(data2).then((response) => {
       console.log(`tentativa ${sendTest}º: ${response[0].statusCode}`)
