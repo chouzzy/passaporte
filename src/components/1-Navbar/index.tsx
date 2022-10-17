@@ -41,9 +41,9 @@ export function Navbar() {
    {id:'#contato', text:'Contato'}]
 
    let socialMediaLinks = [
-      {id:"instagram", instagram:'https://www.instagram.com/lindacortintas/'},
-      {id:"facebook", facebook:'https://www.facebook.com/Lindacor-Tintas-104622232176385'},
-      {id:"linkedin", linkedin:'https://www.linkedin.com/company/lindacor-tintas/'},
+      {id:"instagram", instagram:'https://www.instagram.com/clubedopassaporte/'},
+      {id:"facebook", facebook:'https://www.facebook.com/teste'},
+      {id:"linkedin", linkedin:'https://www.linkedin.com/company/teste/'},
       {id:"whatsapp", whatsapp:`https://wa.me/${whatsNumber}?text=Olá, tudo bem? Acessei o site do Clube do Passaporte e gostaria de falar com um atendente.`},
    ]
 
