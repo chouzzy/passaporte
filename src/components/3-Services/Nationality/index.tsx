@@ -8,26 +8,27 @@ interface NationalityProps {
 }
 
 export function Nationality({changePage}: NationalityProps) { 
+
    const lines = [
-   {image:'static/img/sefarad.jpg', name:'Sefardita', cols:[4,4,2,2], 
-   lineData:{title: 'Sefardita', text: 
+   {image:'static/img/sefarad.jpg', name:'Sefaradita', cols:[4,4,2,2], 
+   lineData:{mode:'nationality',title: 'Sefaradita', text: 
    <Flex display='inline'>
       A partir do final do século XV a Península Ibérica foi palco de uma perseguição sem precedentes em face de povos não-cristãos, em especial os judeus, que culminou em milhares de pessoas cruelmente mortas e outras milhares forçosamente convertidas ao cristianismo. Centenas de anos depois, em 2015, Portugal aprovou uma lei que permite a concessão de cidadania portuguesa para todos os descendentes de judeus perseguidos durante esse período, chamado de Inquisição. E como isso pode afetar você? Estima-se que mais da metade da população brasileira possui alguma ascendência de perseguidos pela Inquisição, mesmo que nunca tenham ouvido falar sobre tal ascendência ou sobre qualquer parentesco com judeus, o que pode incluir pessoas com sobrenomes comuns à população brasileira, como Nóbrega, Rodrigues, Oliveira, Batista, Albuquerque e centenas de outros!
       <br></br> <br></br>
 
-      A Inquisição perdurou por mais de 300 anos em Portugal, trazendo efeitos observáveis até os dias de hoje. Milhões de pessoas foram forçadas a abandonarem a sua fé e suas crenças, para evitarem perseguições, torturas e até execuções, levando milhares de pessoas à conversão forçada ao Cristianismo e à adoção de sobrenomes que são típicos da população brasileira nos dias atuais. Como forma de reparação histórica, em 2015 foi aprovado o Decreto-Lei 30-A/2015, propiciando o direito à cidadania portuguesa a todos os descendentes de judeus perseguidos neste período, os chamados judeus sefarditas. Assim, milhões de brasileiros são elegíveis, mesmo que a ancestralidade nunca tenha sido conhecida.
+      A Inquisição perdurou por mais de 300 anos em Portugal, trazendo efeitos observáveis até os dias de hoje. Milhões de pessoas foram forçadas a abandonarem a sua fé e suas crenças, para evitarem perseguições, torturas e até execuções, levando milhares de pessoas à conversão forçada ao Cristianismo e à adoção de sobrenomes que são típicos da população brasileira nos dias atuais. Como forma de reparação histórica, em 2015 foi aprovado o Decreto-Lei 30-A/2015, propiciando o direito à cidadania portuguesa a todos os descendentes de judeus perseguidos neste período, os chamados judeus sefaraditas. Assim, milhões de brasileiros são elegíveis, mesmo que a ancestralidade nunca tenha sido conhecida.
       <br></br> <br></br>
 
-      O processo exige que uma comunidade judaica reconhecida pelo governo português certifique a ascendência sefardita do requerente. Para tanto, o Clube do Passaporte conta com um time de especialistas em genealogia, que trabalham na elaboração de um relatório completo, fazendo a conexão com o ancestral perseguido no período da Inquisição. O relatório possui centenas de páginas, descrevendo e comprovando a sua ancestralidade com um judeu sefardita, que pode chegar até dezenas de gerações. Este estudo é uma verdadeira herança familiar fantástica é submetido para análise e certificação da comunidade judaica, levando sempre em consideração a vasta experiência que temos na submissão de relatórios para estas instituições, com centenas de clientes já certificados.
+      O processo exige que uma comunidade judaica reconhecida pelo governo português certifique a ascendência sefaradita do requerente. Para tanto, o Clube do Passaporte conta com um time de especialistas em genealogia, que trabalham na elaboração de um relatório completo, fazendo a conexão com o ancestral perseguido no período da Inquisição. O relatório possui centenas de páginas, descrevendo e comprovando a sua ancestralidade com um judeu sefaradita, que pode chegar até dezenas de gerações. Este estudo é uma verdadeira herança familiar fantástica é submetido para análise e certificação da comunidade judaica, levando sempre em consideração a vasta experiência que temos na submissão de relatórios para estas instituições, com centenas de clientes já certificados.
       <br></br> <br></br>
 
-      De forma prévia ao início do relatório e quaisquer submissões, fazemos uma análise preliminar, chamada de análise de viabilidade. A partir do fornecimento de alguns documentos e informações, nossa equipe de especialistas faz uma análise criteriosa, de modo a garantir a maior assertividade possível em termos de ascendência sefardita e de aprovação da comunidade judaica. É por esta razão que temos orgulho de ostentar 100% de aprovações e certificações na comunidade judaica!
+      De forma prévia ao início do relatório e quaisquer submissões, fazemos uma análise preliminar, chamada de análise de viabilidade. A partir do fornecimento de alguns documentos e informações, nossa equipe de especialistas faz uma análise criteriosa, de modo a garantir a maior assertividade possível em termos de ascendência sefaradita e de aprovação da comunidade judaica. É por esta razão que temos orgulho de ostentar 100% de aprovações e certificações na comunidade judaica!
       <br></br> <br></br>
 
       Nós tratamos de tudo para você, até o final do processo, quando o cliente recebe o seu assento de nascimento português, equivalente à cidadania portuguesa e pode usufruir de todos os benefícios de ser um cidadão europeu! 
       <br></br> <br></br>
 
-      A lei que concede o direito à cidadania portuguesa para descendentes de sefarditas exige que o solicitante tenha provas de conexão com Portugal. Porém, não se preocupe, pois o Clube do Passaporte orienta o cliente acerca da melhor maneira de conseguir essas provas de conexão e obter a sua cidadania.
+      A lei que concede o direito à cidadania portuguesa para descendentes de sefaraditas exige que o solicitante tenha provas de conexão com Portugal. Porém, não se preocupe, pois o Clube do Passaporte orienta o cliente acerca da melhor maneira de conseguir essas provas de conexão e obter a sua cidadania.
       <br></br> <br></br>
 
       Por fim, caso você seja praticante da religião judaica atualmente e com ascendência de países do norte da África e do Oriente Médio, como Líbano, Síria, Turquia, entre outros, você também tem direito à cidadania portuguesa, havendo algumas especificidades no processo, que também são tratadas diretamente com o nosso time especializado!
@@ -39,9 +40,8 @@ export function Nationality({changePage}: NationalityProps) {
    serviceImage:'static/img/sefarad.jpg'}},
 
    {image:'static/img/passport.jpg', name:'Via Direta', cols:[4,4,2,2], 
-   lineData:{title: 'Título 2 - What is Lorem Ipsum?', text: 'texto 2 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-2.jpg'}},
+   lineData:{mode:'nationality',title: 'Título 2 - What is Lorem Ipsum?', text: 'texto 2 -Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of', serviceImage:'static/img/nat-2.jpg'}},
 ]
-
    const textData = {
       title:<Flex display='inline'> Nacionalidade e <Flex display='inline' color='clubMaldivas'>Cidadania</Flex></Flex>,
       subtitle:

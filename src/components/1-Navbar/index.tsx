@@ -1,4 +1,4 @@
-import { useBreakpointValue, Grid, GridItem,Link, Image, HStack, Flex, Text, VStack, useColorModeValue} from "@chakra-ui/react"
+import { useBreakpointValue, Grid, GridItem,Link, Image, HStack, Flex, Text, VStack, useColorModeValue, Button} from "@chakra-ui/react"
 import { ModalMenu } from "./Modal";
 import { BsInstagram } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -8,8 +8,17 @@ import {CaretDown} from "phosphor-react";
 import { useDisclosure, MenuItem, Menu, MenuButton, MenuList} from "@chakra-ui/react"
 import {Link as Slink} from 'react-scroll'
 
+const Scroll = require('react-scroll');
+const scroll = Scroll.animateScroll;
+const scroller = Scroll.scroller;
 
-export function Navbar() {
+
+interface NavbarProps {
+   serviceOn: boolean,
+   backPage?():any
+}
+
+export function Navbar({serviceOn, backPage}:NavbarProps) {
    const [whatsNumber, setWhatsNumber] = useState('11912304030')
    const { isOpen, onOpen, onClose } = useDisclosure()
    // useEffect(() => {
@@ -32,13 +41,22 @@ export function Navbar() {
       xl: false
    })
 
+   const homeOffset = useBreakpointValue(     { base:  0 , sm: 0 , md:  0 , lg: 0 , xl: 0 })
+   const quemSomosOffset = useBreakpointValue({ base: 700 , sm: 700 , md:  700 , lg: 700 , xl: 700 })
+   const feedbacksOffset = useBreakpointValue({ base: 1700,   sm: 1400,   md:  1400,   lg: 1340,   xl: 1260})
+   const namidiaOffset = useBreakpointValue(  { base:2400 ,   sm: 2000 ,   md:  2000 ,   lg: 1940 ,   xl: 1760 })
+   const contatoOffset = useBreakpointValue(  { base:100,    sm: 100,    md:  100,    lg: 50,    xl: 50})
+
+   const nationalityOffset = useBreakpointValue(  {base:  -100,    sm: -100,    md:  -100,    lg: 2550,    xl: 2350})
+   const visaOffset = useBreakpointValue(  {base:  -100,    sm: -100,    md:  -100,    lg: 3200 ,   xl:3000 })
+
    const navItems= [
-   {id:'#Home', text:'Home', active:'active'},
-   {id:'#quemSomos', text:'Quem somos'},
+   {id:'#Home', text:'Home', active:'active', offSet:homeOffset},
+   {id:'#quemSomos', text:'Quem somos', offSet:quemSomosOffset},
    {id:'#services', text:'Serviços'},
-   {id:'#feedbacks', text:'Referências'},
-   {id:'#namidia', text:'Na Mídia'},
-   {id:'#contato', text:'Contato'}]
+   {id:'#feedbacks', text:'Referências', offSet:feedbacksOffset},
+   {id:'#namidia', text:'Na Mídia', offSet:namidiaOffset},
+   {id:'#contato', text:'Contato', offSet:contatoOffset}]
 
    let socialMediaLinks = [
       {id:"instagram", instagram:'https://www.instagram.com/clubedopassaporte/'},
@@ -48,13 +66,22 @@ export function Navbar() {
    ]
 
    const services = [
-      {id:'#visa', name:'Vistos'},
-      {id:'#nationality', name:'Cidadania via direta'},
-      {id:'#nationality2', name:'Cidadania via sefardita'},
+      {id:'#visa', name:'Vistos',offset:visaOffset},
+      {id:'#nationality', name:'Cidadania via direta',offset:nationalityOffset},
+      {id:'#nationality', name:'Cidadania via sefardita',offset:nationalityOffset},
    ]
 
+   function handleNavbarScrollService(offset) {
+      backPage()
+      scroll.scrollTo(offset, {
+         duration: 1000,
+         smooth: true,
+      })
+   }
+
    return (
-      <Flex w='100%' position='fixed' zIndex={1}>
+      <>
+      <Flex id='#navbar' w='100%' position='fixed' zIndex={1}>
          <Grid
             p={4}
             position='relative'
@@ -70,6 +97,7 @@ export function Navbar() {
 
          <GridItem mr={['auto','','','','auto']} ml={[6,6,12,12]} colStart={[0,0,1,1,1]} colEnd={[0,0,3,3,3]}>
          
+         {/* LOGO */}
          <Link href='/' _hover={{textDecoration:'none'}}>
             <HStack alignItems='center'>
                <Image mx='auto' src='static/img/logo branco.png' maxW={10} alt='Logo do Clube do Passaporte'/>
@@ -79,11 +107,10 @@ export function Navbar() {
                </VStack>
             </HStack>
          </Link>
-
          </GridItem>
 
          {isMobile?
-            <ModalMenu key={navItems} mediaLinks={socialMediaLinks} navItems={navItems}/>
+            <ModalMenu key={navItems} serviceOn={serviceOn} backPage={backPage} mediaLinks={socialMediaLinks} navItems={navItems}/>
          : 
          <>
             <GridItem colStart={[3,3,3,3,3]} mt={4} colEnd={[10,10,10,11,11]} >
@@ -102,7 +129,7 @@ export function Navbar() {
                                   onMouseLeave={onClose}
                               >
                                   <Flex justify='center' align='center' gap={1} >
-                                    <Text display='inline'>
+                                    <Text display='inline' fontWeight={300}>
                                        {item.text} 
                                     </Text>
                                     {isOpen ? <CaretDown color='#4ca7a1' /> : <CaretDown />}   
@@ -115,24 +142,33 @@ export function Navbar() {
                                   {services.map(item => {
                                      return (
                                        <MenuItem fontWeight={300} fontSize='0.8rem' letterSpacing={0.5} color='white' key={item.id} textTransform='uppercase' _hover={{bg:'clubCigar'}}>
-
+                                          
+                                       {serviceOn == true?
                                           <Slink to={item.id} spy={true} smooth={true} offset={-60} duration={500}>
                                           <Flex _hover={{color:'white'}}>
                                                 <Flex w='2px' bg='clubMaldivas' mr={2} display='inline'></Flex>
                                                 <Text display='inline'> {item.name} </Text>
                                           </Flex>
                                           </Slink>
+                                          :
+                                          <Slink onClick={() => {handleNavbarScrollService(item.offset)}}>
+                                          <Flex _hover={{color:'white'}}>
+                                                <Flex w='2px' bg='clubMaldivas' mr={2} display='inline'></Flex>
+                                                <Text display='inline'> {item.name} </Text>
+                                          </Flex>
+                                          </Slink>
+                                       }
 
                                        </MenuItem>
                                     )
                                   })}
                               </MenuList>
-                          </Menu>
+                              </Menu>
                            )
                         } else {
                            return (
-                              <NavItem key={item.text} id={item.id} text={item.text} 
-                              activeClass={item.active}/>
+                              <NavItem key={item.text} serviceOn={serviceOn} backPage={backPage} id={item.id} text={item.text} 
+                              activeClass={item.active} offSet={item.offSet}/>
                            )
                         }
                      })}
@@ -142,8 +178,8 @@ export function Navbar() {
 
             <GridItem colStart={[10,10,10,11,11]} colEnd={13} pt={4}>
                <HStack justifyContent='center' alignItems='baseline' spacing={2} fontSize='1.2rem' color='clubAqua'>
-                  <Link _hover={{color: "clubAquaClean"}} href={socialMediaLinks[0].instagram}> <BsInstagram /> </Link>
-                  <Link className='zap-tag' _hover={{color:'clubAquaClean', transition:'200ms'}} color='#6cd474'fontSize='1.3rem' href={socialMediaLinks[3].whatsapp}> <RiWhatsappFill/> </Link>
+                  <Link _hover={{color: "clubAquaClean"}} target="_blank" href={socialMediaLinks[0].instagram}> <BsInstagram /> </Link>
+                  <Link className='zap-tag' target="_blank" _hover={{color:'clubAquaClean', transition:'200ms'}} color='#6cd474'fontSize='1.3rem' href={socialMediaLinks[3].whatsapp}> <RiWhatsappFill/> </Link>
                </HStack>
             </GridItem>
 
@@ -154,5 +190,9 @@ export function Navbar() {
          }
          </Grid>
       </Flex>
+
+      
+      </>
+
    )
 }

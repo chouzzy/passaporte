@@ -6,6 +6,7 @@ import { InitialHome } from "../components/2-Homepage";
 import { Homepage } from "../components/2-Homepage/Homepage";
 import { Services } from "../components/3-Services";
 import { Footer } from "../components/6-Footer";
+import WhatsButton from "../components/WhatsButton";
 
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
     </Head>
     {page}
     <Footer/>
+    <WhatsButton/>
     {/* // Homepage basica até o Como conseguir a Cidadania Portuguesa? - botão descubra se é elegivel indo para contacts
     // serviços (nacionalidade e visto)
     // feedbacks

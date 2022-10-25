@@ -196,7 +196,7 @@ const {
          <Flex w='100%'>
             <Flex display='inline' mx='auto' fontWeight='300' fontSize='0.7rem'> 
                desenvolvido por 
-               <Link href='awer.co' color='#F55F5E' _hover={{textDecoration: 'none' , color:'#729EA1'}}>
+               <Link href='https://awer.co' target="_blank" color='#F55F5E' _hover={{textDecoration: 'none' , color:'#729EA1'}}>
                   <Text display='inline' > awer.co </Text>
                </Link>
             </Flex> 

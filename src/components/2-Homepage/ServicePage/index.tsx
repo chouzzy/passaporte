@@ -6,6 +6,7 @@ interface ServicePageProps {
    servicePageData:{
       title:string,
       text:string,
+      mode?:string,
       serviceImage:string
    }
    backPage(): any
@@ -13,11 +14,12 @@ interface ServicePageProps {
 
 export function ServicePage( {servicePageData, backPage}:ServicePageProps) {
    
-   const backButtonOffset = useBreakpointValue({ base: 2800, sm: 2800, md: 2400, lg: 2400, xl: 2400})
+
+   const visaBackButtonOffset = useBreakpointValue({ base: 3100, sm: 2800, md: 2650, lg: 2650, xl: 2400})
+   const nationalityBackButtonOffset = useBreakpointValue({ base: 4200, sm: 3800, md: 3250, lg: 3300, xl: 3100})
    return (
-      <Flex bgGradient='linear(135deg, whiteAlpha.900, whiteAlpha.800)' w='100%' mt={[83]}>
-         <Flex  flexDir='column'
-          alignItems='center'
+      <Flex bgGradient='linear(135deg, whiteAlpha.900, whiteAlpha.800)' w='100%' mt={[83]} >
+         <Flex  flexDir='column' alignItems='center' w='100%'
          bgImage={'static/img/airplane-bg.png'} bgPosition='center' bgSize={'cover'} bgRepeat='no-repeat'
          >
 
@@ -37,8 +39,8 @@ export function ServicePage( {servicePageData, backPage}:ServicePageProps) {
                      <Heading fontWeight='400' w='100%' fontSize='1.6rem' textAlign={'left'}> 
                         {servicePageData.title} 
                      </Heading>
-                     <Flex display='inline' fontWeight={400}> {servicePageData.text}</Flex>
-                     <Slink to={'#Home'} spy={true} smooth={true} offset={backButtonOffset} duration={500}>
+                     <Flex display='inline' fontWeight={400} textAlign='justify'> {servicePageData.text}</Flex>
+                     <Slink to={'#Home'} spy={true} smooth={true} offset={servicePageData.mode == 'nationality' ? visaBackButtonOffset : nationalityBackButtonOffset} duration={0}>
                         <Button
                         mx='auto'
                         size='sm'

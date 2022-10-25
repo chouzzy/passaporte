@@ -15,7 +15,7 @@ const feedbacks = [
 ]
 
 const feedbackTitle =  <Heading mx='auto' fontWeight='300' fontSize='1.6rem' color='gray.900'> 
-        Veja o que nossos clientes <b style={{color:'#1c928b'}}> dizem sobre nós</b>
+        Relatos de  <b style={{color:'#1c928b'}}> nossos clientes</b>
     </Heading>
 
 const lines = [

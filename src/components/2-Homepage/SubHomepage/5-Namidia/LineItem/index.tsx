@@ -24,11 +24,11 @@ export function LineItem({image, text, newsLink}:LineItemProps) {
                   <Grid w={'100.3%'} h='100%' position='absolute' p={4} color='gray.50'>
                      <VStack textAlign='left'>
 
-                        <Link href={newsLink}>
+                        <Link href={newsLink} target="_blank">
                            <Image src={image}/>
                         </Link>
                         
-                        <Link href={newsLink}>
+                        <Link href={newsLink} target="_blank">
                            <Text _hover={{color:'clubMaldivas'}} fontSize={'1.2rem'} fontWeight='600' color='gray.900' lineHeight={1.1} borderRadius={1}>
                               {text}
                            </Text>

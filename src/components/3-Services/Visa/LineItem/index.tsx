@@ -27,7 +27,7 @@ export function LineItem({LineImage, LineName, columns, lineData, changePage}:Li
                
                <Image src={LineImage} mx='auto'  _hover={{outline:'1px solid #4ca7a1', transition:'400ms', boxShadow:'dark-lg'}} boxSize={[32,40,40,48]} borderRadius={'100%'} objectFit='cover'/>
                
-               <Flex maxW={72} py={2} justifyContent={'center'} mx='auto' 
+               <Flex maxW={72} py={2} justifyContent={'center'} mx='auto'
                fontSize={['0.8rem','0.8rem','1rem','1.1rem']}>
                {LineName}
                </Flex>

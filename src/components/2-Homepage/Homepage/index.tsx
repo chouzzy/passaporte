@@ -22,7 +22,7 @@ export function Homepage({serviceOn, backPage, servicePageData}:HomepageProps) {
    return (
       <>
          <Container id='#Home' maxW='100vw' bg='clubDark' p='0' m='0' centerContent>
-         <Navbar/>
+         <Navbar serviceOn={serviceOn} backPage={backPage}/>
          {serviceOn? <Banner/> 
          :
          <ServicePage servicePageData={servicePageData} backPage={backPage}/>

@@ -30,7 +30,8 @@ export function ModalMenu(ModalMenuProps) {
                   {ModalMenuProps.navItems.map( item => {
                      return (
                         
-                           <NavItem key={item.id} id={item.id} text={item.text} activeClass={item.active} navColor={item.color}/>
+                           <NavItem key={item.id} id={item.id} text={item.text} activeClass={item.active} navColor={item.color} 
+                           serviceOn={ModalMenuProps.serviceOn} backPage={ModalMenuProps.backPage} offSet={item.offSet} modalToggle={onToggle}/>
                         
                      )
                   })}
