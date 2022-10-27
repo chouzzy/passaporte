@@ -5,16 +5,16 @@ const firstSessionData = {
    title:'Quem somos',
    history:
       <>
-      <Text fontSize='0.8rem' fontWeight='300' lineHeight={1.5}>
+      <Text fontSize='0.9rem' fontWeight='300' lineHeight={1.5}>
          O Clube do Passaporte é um escritório migratório conceituado, com profissionais gabaritados, um espírito jovem e inovador. Acreditamos na desburocratização total dos processos para os nossos clientes, de modo a resolver as questões referentes à nacionalidade portuguesa de forma eficaz, precisa e transparente. Além disso, cuidamos dos processos de A a Z, com intuito de chegar ao resultado desejado rapidamente e sem qualquer trabalho para o cliente. <br></br> <br></br> Não obstante,  prezamos por sempre manter um canal de comunicação direto e aberto com o cliente com intuito de garantir segurança e tranquilidade  durante o  decorrer de nosso serviço.
       </Text>
       </>,
    missionTitle:'Missão',
-   mission:<Text fontSize='0.8rem' fontWeight='300'>
+   mission:<Text fontSize='0.9rem' fontWeight='300'>
       Ajudar o máximo de pessoas na busca de <b style={{color:'#4ca7a1'}}> novas oportunidades de vida </b>- tanto profissionais quanto pessoais - em solo português e europeu. 
       </Text>,
    valuesTitle:'Valores',
-   values:<Text fontSize='0.8rem' fontWeight='300'>
+   values:<Text fontSize='0.9rem' fontWeight='300'>
       Inovação, eficiência, agilidade, transparência, foco no cliente e zelo pelos processos que estão sob nossa <b style={{color:'#4ca7a1'}}> responsabilidade. </b> 
       </Text>,
    list:[

@@ -116,13 +116,24 @@ export function Visa({changePage}: VisaProps) {
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}> Saiba mais!</Slink> </Text>
       </Flex>,
         serviceImage:'static/img/visa-7.jpg'}},
-      {image:'static/img/visa-8.jpg', 
-      name:<VStack> <Text>Visto D8</Text> <Text> Apenas para trabalho temporário.</Text> </VStack>,
-      cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D8: O visto de trabalho temporário', 
-      text:<Flex display='inline'> <br></br> <br></br>  🚧 Área em construção 🚧 <br></br><br></br>
-      <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}> </Slink> </Text>
-      </Flex>,
-      serviceImage:'static/img/visa-8.jpg'}},
+        {image:'static/img/visa-8.jpg', 
+        name:<VStack> <Text>Visto D8</Text> <Text> Visto de trabalho temporário.</Text> </VStack>,
+        cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D8: O ideal para milhões de brasileiros. ', 
+        text:<Flex display='inline'>
+          Se você está buscando uma oportunidade de vida melhor no estrangeiro e em um país de primeiro mundo, esse pode ser o Visto ideal para você! Recém aprovado pelo governo português, o Visto temporário de trabalho permite a ida para Portugal de forma legal, com o objetivo do aplicante buscar trabalho por lá, sem a necessidade de qualquer vínculo prévio.
+        <br></br> <br></br>  
+          Ao chegar no país luso, o aplicante deve encontrar um trabalho subordinado em até quatro meses (podendo estender por mais dois) e, assim, cumprirá os requisitos para a Autorização de Residência, de forma a garantir sua morada em Portugal e dentro da União Europeia por anos. 
+        <br></br><br></br>
+          Antes de ir, será necessária algumas comprovações e a autorização do Governo português, mas nós do Clube de Passaporte podemos te auxiliar com tudo isso.
+        <br></br><br></br>
+          Para saber mais,
+       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}>
+          <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}>
+             clique aqui e fale com nossos especialistas!
+          </Slink> 
+       </Text>
+       </Flex>,
+         serviceImage:'static/img/visa-8.jpg'}},
    ]
 
    const lines = [
@@ -234,10 +245,21 @@ export function Visa({changePage}: VisaProps) {
       </Flex>,
         serviceImage:'static/img/visa-7.jpg'}},
       {image:'static/img/visa-8.jpg', 
-       name:<VStack> <Text>Visto D8</Text> <Text> Apenas para trabalho temporário.</Text> </VStack>,
-       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D8: O visto de trabalho temporário', 
-       text:<Flex display='inline'> <br></br> <br></br>  🚧 Área em construção 🚧 <br></br><br></br>
-      <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}> </Slink> </Text>
+       name:<VStack> <Text>Visto D8</Text> <Text> Visto de trabalho temporário.</Text> </VStack>,
+       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D8: O ideal para milhões de brasileiros. ', 
+       text:<Flex display='inline'>
+         Se você está buscando uma oportunidade de vida melhor no estrangeiro e em um país de primeiro mundo, esse pode ser o Visto ideal para você! Recém aprovado pelo governo português, o Visto temporário de trabalho permite a ida para Portugal de forma legal, com o objetivo do aplicante buscar trabalho por lá, sem a necessidade de qualquer vínculo prévio.
+       <br></br> <br></br>  
+         Ao chegar no país luso, o aplicante deve encontrar um trabalho subordinado em até quatro meses (podendo estender por mais dois) e, assim, cumprirá os requisitos para a Autorização de Residência, de forma a garantir sua morada em Portugal e dentro da União Europeia por anos. 
+       <br></br><br></br>
+         Antes de ir, será necessária algumas comprovações e a autorização do Governo português, mas nós do Clube de Passaporte podemos te auxiliar com tudo isso. 
+       <br></br><br></br>
+         Para saber mais,{' '} 
+      <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}>
+         <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}>
+            clique aqui e fale com nossos especialistas!
+         </Slink> 
+      </Text>
       </Flex>,
         serviceImage:'static/img/visa-8.jpg'}},
    ]
