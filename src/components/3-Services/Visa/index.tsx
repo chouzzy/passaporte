@@ -10,8 +10,8 @@ export function Visa({changePage}: VisaProps) {
 
    const linesBkp = [
       {image:'static/img/visa-8.jpg', 
-      name:<VStack> <Text>Visto para procura de trabalho em Portugal</Text> <Text></Text> </VStack>,
-      cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto para procura de trabalho em Portugal', 
+      name:<VStack> <Text>Visto para procura de trabalho em Portugal.</Text> <Text></Text> </VStack>,
+      cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto para procura de trabalho em Portugal.', 
       text:<Flex display='inline'>
         Se você está buscando uma oportunidade de vida melhor no estrangeiro e em um país de primeiro mundo, esse pode ser o Visto ideal para você! Recém aprovado pelo governo português, o Visto temporário de trabalho permite a ida para Portugal de forma legal, com o objetivo do aplicante buscar trabalho por lá, sem a necessidade de qualquer vínculo prévio.
       <br></br> <br></br>  
@@ -28,8 +28,8 @@ export function Visa({changePage}: VisaProps) {
      </Flex>,
        serviceImage:'static/img/visa-8.jpg'}},
       {image:'static/img/visa-1.jpg', 
-       name:<VStack> <Text>Visto D1</Text> <Text>Trabalhe legalmente em Portugal</Text> </VStack>,
-       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D1: Trabalhe legalmente em Portugal', 
+       name:<VStack> <Text>Visto D1</Text> <Text>Trabalhe legalmente em Portugal.</Text> </VStack>,
+       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D1: Trabalhe legalmente em Portugal.', 
        text:<Flex display='inline'>O Visto D1 é uma excelente oportunidade para aqueles que têm interesse em exercer atividade subordinada em Portugal, portando uma promessa de emprego formal ou contrato de trabalho assinado. <br></br> <br></br>  Existem algumas outras obrigações para aqueles que têm uma oportunidade de trabalho em Portugal, para além da necessidade de uma promessa de emprego e/ou de um contrato de trabalho. A obtenção do Visto D1 demanda a necessidade de anúncio, por parte da empresa contratante, da vaga no Instituto do Emprego e da Formação Profissional (IEFP). Este anúncio é de responsabilidade exclusiva da empresa, que deverá fornecer declaração de cumprimento deste fluxo.
        <br></br><br></br>
        
@@ -64,8 +64,8 @@ export function Visa({changePage}: VisaProps) {
       serviceImage:'static/img/visa-2.jpg'}},
 
       {image:'static/img/visa-3.jpg', 
-       name:<VStack> <Text>Visto D3</Text> <Text>Ideal para profissionais gabaritados</Text> </VStack>,
-       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D3: Ideal para profissionais gabaritados ', 
+       name:<VStack> <Text>Visto D3</Text> <Text>Ideal para profissionais gabaritados.</Text> </VStack>,
+       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D3: Ideal para profissionais gabaritados. ', 
        text:<Flex display='inline'>O Visto D3 é ideal para você que desempenha uma atividade altamente qualificada e com competência técnica especializada. Ou seja, é adequado para aqueles que no exercício inerente aos seus cargos, tomam decisões especializadas ou trabalham na resolução de problemas complexos. São exemplos de cargos que podem ter o direito à aplicação para este Visto: engenheiros, cientistas, investigadores, gestores, juristas, docentes de ensino superior, entre outras ocupações. <br></br> <br></br>  Esta modalidade de Visto possibilita ao seu titular o ingresso com o processo de autorização de residência em Portugal e, sobretudo, a solicitação do Cartão Azul. Este último documento é bem vantajoso, já que permite ao aplicante trabalhar de forma legal em qualquer país da União Europeia depois de 18 meses de sua concessão.{' '}
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> 
          <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}> 
@@ -138,8 +138,8 @@ export function Visa({changePage}: VisaProps) {
 
    const lines = [
       {image:'static/img/visa-8.jpg', 
-      name:<VStack> <Text>Visto para procura de trabalho em Portugal</Text> <Text></Text> </VStack>,
-      cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto para procura de trabalho em Portugal', 
+      name:<VStack> <Text>Visto para procura de trabalho em Portugal.</Text> <Text></Text> </VStack>,
+      cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto para procura de trabalho em Portugal.', 
       text:<Flex display='inline'>
         Se você está buscando uma oportunidade de vida melhor no estrangeiro e em um país de primeiro mundo, esse pode ser o Visto ideal para você! Recém aprovado pelo governo português, o Visto temporário de trabalho permite a ida para Portugal de forma legal, com o objetivo do aplicante buscar trabalho por lá, sem a necessidade de qualquer vínculo prévio.
       <br></br> <br></br>  
@@ -156,8 +156,8 @@ export function Visa({changePage}: VisaProps) {
      </Flex>,
        serviceImage:'static/img/visa-8.jpg'}},
       {image:'static/img/visa-1.jpg', 
-       name:<VStack> <Text>Visto D1</Text> <Text>Trabalhe legalmente em Portugal</Text> </VStack>,
-       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D1: Trabalhe legalmente em Portugal', 
+       name:<VStack> <Text>Visto D1</Text> <Text>Trabalhe legalmente em Portugal.</Text> </VStack>,
+       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D1: Trabalhe legalmente em Portugal.', 
        text:<Flex display='inline'>O Visto D1 é uma excelente oportunidade para aqueles que têm interesse em exercer atividade subordinada em Portugal, portando uma promessa de emprego formal ou contrato de trabalho assinado. <br></br> <br></br>  Existem algumas outras obrigações para aqueles que têm uma oportunidade de trabalho em Portugal, para além da necessidade de uma promessa de emprego e/ou de um contrato de trabalho. A obtenção do Visto D1 demanda a necessidade de anúncio, por parte da empresa contratante, da vaga no Instituto do Emprego e da Formação Profissional (IEFP). Este anúncio é de responsabilidade exclusiva da empresa, que deverá fornecer declaração de cumprimento deste fluxo.
        <br></br><br></br>
        
@@ -192,8 +192,8 @@ export function Visa({changePage}: VisaProps) {
       serviceImage:'static/img/visa-2.jpg'}},
 
       {image:'static/img/visa-3.jpg', 
-       name:<VStack> <Text>Visto D3</Text> <Text>Ideal para profissionais gabaritados</Text> </VStack>,
-       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D3: Ideal para profissionais gabaritados ', 
+       name:<VStack> <Text>Visto D3</Text> <Text>Ideal para profissionais gabaritados.</Text> </VStack>,
+       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D3: Ideal para profissionais gabaritados. ', 
        text:<Flex display='inline'>O Visto D3 é ideal para você que desempenha uma atividade altamente qualificada e com competência técnica especializada. Ou seja, é adequado para aqueles que no exercício inerente aos seus cargos, tomam decisões especializadas ou trabalham na resolução de problemas complexos. São exemplos de cargos que podem ter o direito à aplicação para este Visto: engenheiros, cientistas, investigadores, gestores, juristas, docentes de ensino superior, entre outras ocupações. <br></br> <br></br>  Esta modalidade de Visto possibilita ao seu titular o ingresso com o processo de autorização de residência em Portugal e, sobretudo, a solicitação do Cartão Azul. Este último documento é bem vantajoso, já que permite ao aplicante trabalhar de forma legal em qualquer país da União Europeia depois de 18 meses de sua concessão.{' '}
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> 
          <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}> 
