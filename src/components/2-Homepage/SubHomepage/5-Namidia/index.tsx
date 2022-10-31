@@ -35,7 +35,7 @@ const namidiaTitle =  <Heading mx='auto' fontWeight='300' fontSize='1.6rem' colo
             </Heading>
 
 const namidiaSubtitle = <Text mx='auto' maxW={'80vw'} fontWeight='300' fontSize='1.1rem' color='gray.50'> 
-            Nos últimos anos, fomos reconhecidos e referenciados pelos <b style={{color:'#1c928b'}}> grandes veículos de imprensa</b>, brasileiros, fruto de um trabalho sério, transparente e com <b style={{color:'#1c928b'}}>qualidade.</b>
+            Nos últimos anos, fomos reconhecidos e referenciados pelos <b style={{color:'#1c928b'}}> grandes veículos brasileiros de imprensa</b>, fruto de um trabalho sério, transparente e com <b style={{color:'#1c928b'}}>qualidade.</b>
             </Text>
 
 const lines = [
