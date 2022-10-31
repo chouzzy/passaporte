@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
          {/* <!-- Twitter Meta Tags --> */}
          <meta name="twitter:card" content="summary_large_image"/>
          <meta property="twitter:domain" content="clubedopassaporte.com"/>
-         <meta property="twitter:url" content="https://www.clubedopassaporte.com/"/>
+         <meta property="twitter:url" content="https://www.clubedopassaporte.com//"/>
          <meta name="twitter:title" content="Clube do Passaporte - O Futuro na Europa nunca esteve tão próximo de você."/>
          <meta name="twitter:description" content="O futuro na Europa nunca esteve tão próximo de você."/>
          <meta name="twitter:image" content="https://www.clubedopassaporte.com/static/img/logo.png"/>
