@@ -9,6 +9,24 @@ interface VisaProps {
 export function Visa({changePage}: VisaProps) { 
 
    const linesBkp = [
+      {image:'static/img/visa-8.jpg', 
+      name:<VStack> <Text>Visto para procura de trabalho em Portugal</Text> <Text></Text> </VStack>,
+      cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto para procura de trabalho em Portugal', 
+      text:<Flex display='inline'>
+        Se você está buscando uma oportunidade de vida melhor no estrangeiro e em um país de primeiro mundo, esse pode ser o Visto ideal para você! Recém aprovado pelo governo português, o Visto temporário de trabalho permite a ida para Portugal de forma legal, com o objetivo do aplicante buscar trabalho por lá, sem a necessidade de qualquer vínculo prévio.
+      <br></br> <br></br>  
+        Ao chegar no país luso, o aplicante deve encontrar um trabalho subordinado em até quatro meses (podendo estender por mais dois) e, assim, cumprirá os requisitos para a Autorização de Residência, de forma a garantir sua morada em Portugal e dentro da União Europeia por anos. 
+      <br></br><br></br>
+        Antes de ir, será necessária algumas comprovações e a autorização do Governo português, mas nós do Clube de Passaporte podemos te auxiliar com tudo isso.
+      <br></br><br></br>
+        Para saber mais,
+     <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}>
+        <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}>
+           clique aqui e fale com nossos especialistas!
+        </Slink> 
+     </Text>
+     </Flex>,
+       serviceImage:'static/img/visa-8.jpg'}},
       {image:'static/img/visa-1.jpg', 
        name:<VStack> <Text>Visto D1</Text> <Text>Trabalhe legalmente em Portugal</Text> </VStack>,
        cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D1: Trabalhe legalmente em Portugal', 
@@ -46,8 +64,8 @@ export function Visa({changePage}: VisaProps) {
       serviceImage:'static/img/visa-2.jpg'}},
 
       {image:'static/img/visa-3.jpg', 
-       name:<VStack> <Text>Visto D3</Text> <Text>Ótima oportunidade para a obtenção do Cartão Azul europeu.</Text> </VStack>,
-       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D3: Ótima oportunidade para a obtenção do Cartão Azul europeu', 
+       name:<VStack> <Text>Visto D3</Text> <Text>Ideal para profissionais gabaritados</Text> </VStack>,
+       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D3: Ideal para profissionais gabaritados ', 
        text:<Flex display='inline'>O Visto D3 é ideal para você que desempenha uma atividade altamente qualificada e com competência técnica especializada. Ou seja, é adequado para aqueles que no exercício inerente aos seus cargos, tomam decisões especializadas ou trabalham na resolução de problemas complexos. São exemplos de cargos que podem ter o direito à aplicação para este Visto: engenheiros, cientistas, investigadores, gestores, juristas, docentes de ensino superior, entre outras ocupações. <br></br> <br></br>  Esta modalidade de Visto possibilita ao seu titular o ingresso com o processo de autorização de residência em Portugal e, sobretudo, a solicitação do Cartão Azul. Este último documento é bem vantajoso, já que permite ao aplicante trabalhar de forma legal em qualquer país da União Europeia depois de 18 meses de sua concessão.{' '}
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> 
          <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}> 
@@ -116,27 +134,27 @@ export function Visa({changePage}: VisaProps) {
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}> Saiba mais!</Slink> </Text>
       </Flex>,
         serviceImage:'static/img/visa-7.jpg'}},
-        {image:'static/img/visa-8.jpg', 
-        name:<VStack> <Text>Visto D8</Text> <Text> Visto de trabalho temporário.</Text> </VStack>,
-        cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D8: O ideal para milhões de brasileiros. ', 
-        text:<Flex display='inline'>
-          Se você está buscando uma oportunidade de vida melhor no estrangeiro e em um país de primeiro mundo, esse pode ser o Visto ideal para você! Recém aprovado pelo governo português, o Visto temporário de trabalho permite a ida para Portugal de forma legal, com o objetivo do aplicante buscar trabalho por lá, sem a necessidade de qualquer vínculo prévio.
-        <br></br> <br></br>  
-          Ao chegar no país luso, o aplicante deve encontrar um trabalho subordinado em até quatro meses (podendo estender por mais dois) e, assim, cumprirá os requisitos para a Autorização de Residência, de forma a garantir sua morada em Portugal e dentro da União Europeia por anos. 
-        <br></br><br></br>
-          Antes de ir, será necessária algumas comprovações e a autorização do Governo português, mas nós do Clube de Passaporte podemos te auxiliar com tudo isso.
-        <br></br><br></br>
-          Para saber mais,
-       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}>
-          <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}>
-             clique aqui e fale com nossos especialistas!
-          </Slink> 
-       </Text>
-       </Flex>,
-         serviceImage:'static/img/visa-8.jpg'}},
    ]
 
    const lines = [
+      {image:'static/img/visa-8.jpg', 
+      name:<VStack> <Text>Visto para procura de trabalho em Portugal</Text> <Text></Text> </VStack>,
+      cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto para procura de trabalho em Portugal', 
+      text:<Flex display='inline'>
+        Se você está buscando uma oportunidade de vida melhor no estrangeiro e em um país de primeiro mundo, esse pode ser o Visto ideal para você! Recém aprovado pelo governo português, o Visto temporário de trabalho permite a ida para Portugal de forma legal, com o objetivo do aplicante buscar trabalho por lá, sem a necessidade de qualquer vínculo prévio.
+      <br></br> <br></br>  
+        Ao chegar no país luso, o aplicante deve encontrar um trabalho subordinado em até quatro meses (podendo estender por mais dois) e, assim, cumprirá os requisitos para a Autorização de Residência, de forma a garantir sua morada em Portugal e dentro da União Europeia por anos. 
+      <br></br><br></br>
+        Antes de ir, será necessária algumas comprovações e a autorização do Governo português, mas nós do Clube de Passaporte podemos te auxiliar com tudo isso. 
+      <br></br><br></br>
+        Para saber mais,{' '} 
+     <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}>
+        <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}>
+           clique aqui e fale com nossos especialistas!
+        </Slink> 
+     </Text>
+     </Flex>,
+       serviceImage:'static/img/visa-8.jpg'}},
       {image:'static/img/visa-1.jpg', 
        name:<VStack> <Text>Visto D1</Text> <Text>Trabalhe legalmente em Portugal</Text> </VStack>,
        cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D1: Trabalhe legalmente em Portugal', 
@@ -174,8 +192,8 @@ export function Visa({changePage}: VisaProps) {
       serviceImage:'static/img/visa-2.jpg'}},
 
       {image:'static/img/visa-3.jpg', 
-       name:<VStack> <Text>Visto D3</Text> <Text>Ótima oportunidade para a obtenção do Cartão Azul europeu.</Text> </VStack>,
-       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D3: Ótima oportunidade para a obtenção do Cartão Azul europeu', 
+       name:<VStack> <Text>Visto D3</Text> <Text>Ideal para profissionais gabaritados</Text> </VStack>,
+       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D3: Ideal para profissionais gabaritados ', 
        text:<Flex display='inline'>O Visto D3 é ideal para você que desempenha uma atividade altamente qualificada e com competência técnica especializada. Ou seja, é adequado para aqueles que no exercício inerente aos seus cargos, tomam decisões especializadas ou trabalham na resolução de problemas complexos. São exemplos de cargos que podem ter o direito à aplicação para este Visto: engenheiros, cientistas, investigadores, gestores, juristas, docentes de ensino superior, entre outras ocupações. <br></br> <br></br>  Esta modalidade de Visto possibilita ao seu titular o ingresso com o processo de autorização de residência em Portugal e, sobretudo, a solicitação do Cartão Azul. Este último documento é bem vantajoso, já que permite ao aplicante trabalhar de forma legal em qualquer país da União Europeia depois de 18 meses de sua concessão.{' '}
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> 
          <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}> 
@@ -244,24 +262,6 @@ export function Visa({changePage}: VisaProps) {
       <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}> <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}> Saiba mais!</Slink> </Text>
       </Flex>,
         serviceImage:'static/img/visa-7.jpg'}},
-      {image:'static/img/visa-8.jpg', 
-       name:<VStack> <Text>Visto D8</Text> <Text> Visto de trabalho temporário.</Text> </VStack>,
-       cols:[6,6,3,3], lineData:{mode:'visa',title: 'Visto D8: O ideal para milhões de brasileiros. ', 
-       text:<Flex display='inline'>
-         Se você está buscando uma oportunidade de vida melhor no estrangeiro e em um país de primeiro mundo, esse pode ser o Visto ideal para você! Recém aprovado pelo governo português, o Visto temporário de trabalho permite a ida para Portugal de forma legal, com o objetivo do aplicante buscar trabalho por lá, sem a necessidade de qualquer vínculo prévio.
-       <br></br> <br></br>  
-         Ao chegar no país luso, o aplicante deve encontrar um trabalho subordinado em até quatro meses (podendo estender por mais dois) e, assim, cumprirá os requisitos para a Autorização de Residência, de forma a garantir sua morada em Portugal e dentro da União Europeia por anos. 
-       <br></br><br></br>
-         Antes de ir, será necessária algumas comprovações e a autorização do Governo português, mas nós do Clube de Passaporte podemos te auxiliar com tudo isso. 
-       <br></br><br></br>
-         Para saber mais,{' '} 
-      <Text display='inline' color='teal.500' fontWeight={'bold'} _hover={{color:'teal.600', transition:'400ms' , cursor:'pointer'}}>
-         <Slink to={'#contato'} spy={true} smooth={true} offset={-60} duration={500}>
-            clique aqui e fale com nossos especialistas!
-         </Slink> 
-      </Text>
-      </Flex>,
-        serviceImage:'static/img/visa-8.jpg'}},
    ]
 
    const textData = {

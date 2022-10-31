@@ -13,7 +13,7 @@ interface mediaProps {
 export function SocialMedia({mediaLink, mediaColor, icon, tag}:mediaProps) {
    return (
       <>
-         <Link className={tag} href={mediaLink}  _hover={{textDecoration:'none'}}>
+         <Link className={tag} href={mediaLink} target='_blank'  _hover={{textDecoration:'none'}}>
                <Text color={mediaColor} _hover={{transition:'360ms'}} textAlign='center'>
                   {icon}
                </Text>
