@@ -14,15 +14,15 @@ export default class MyDocument extends Document {
          <meta property="og:type" content="website"/>
          <meta property="og:title" content="Clube do Passaporte - O futuro na Europa nunca esteve tão próximo de você."/>
          <meta property="og:description" content="O futuro na Europa nunca esteve tão próximo de você."/>
-         <meta property="og:image" content="https://www.clubedopassaporte.com/static/img/logo-branco.png"/>
+         <meta property="og:image" content="https://www.clubedopassaporte.com/static/img/logo.png"/>
 
          {/* <!-- Twitter Meta Tags --> */}
          <meta name="twitter:card" content="summary_large_image"/>
          <meta property="twitter:domain" content="clubedopassaporte.com"/>
          <meta property="twitter:url" content="https://www.clubedopassaporte.com/"/>
-         <meta name="twitter:title" content="Clube do Passaporte - OfFuturo na Europa nunca esteve tão próximo de você."/>
+         <meta name="twitter:title" content="Clube do Passaporte - O Futuro na Europa nunca esteve tão próximo de você."/>
          <meta name="twitter:description" content="O futuro na Europa nunca esteve tão próximo de você."/>
-         <meta name="twitter:image" content="https://www.clubedopassaporte.com/static/img/logo-branco.png"/>
+         <meta name="twitter:image" content="https://www.clubedopassaporte.com/static/img/logo.png"/>
 
 
          <link rel="preconnect" href="https://fonts.gstatic.com"/>
