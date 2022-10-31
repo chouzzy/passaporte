@@ -10,16 +10,16 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="venda, revenda, Venda, Revenda, Clube do Passaporte, passaporte, clube, viagem, visto, vistos, trabalhar, portugal, trabalhar em portugal, cidadania, sefardita, sefaradita"/>
 
          {/* <!-- Facebook Meta Tags --> */}
-         <meta property="og:url" content="https://www.clubedopassaporte.com.br/"/>
+         <meta property="og:url" content="https://www.clubedopassaporte.com/"/>
          <meta property="og:type" content="website"/>
          <meta property="og:title" content="Clube do Passaporte - O futuro na Europa nunca esteve tão próximo de você."/>
          <meta property="og:description" content="O futuro na Europa nunca esteve tão próximo de você."/>
-         <meta property="og:image" content="https://www.clubedopassaporte.com.br/static/img/logo branco.png"/>
+         <meta property="og:image" content="https://www.clubedopassaporte.com/static/img/logo branco.png"/>
 
          {/* <!-- Twitter Meta Tags --> */}
          <meta name="twitter:card" content="summary_large_image"/>
-         <meta property="twitter:domain" content="clubedopassaporte.com.br"/>
-         <meta property="twitter:url" content="https://www.clubedopassaporte.com.br/"/>
+         <meta property="twitter:domain" content="clubedopassaporte.com"/>
+         <meta property="twitter:url" content="https://www.clubedopassaporte.com/"/>
          <meta name="twitter:title" content="Clube do Passaporte - OfFuturo na Europa nunca esteve tão próximo de você."/>
          <meta name="twitter:description" content="O futuro na Europa nunca esteve tão próximo de você."/>
          <meta name="twitter:image" content="https://www.clubedopassaporte.com.br/static/img/logo branco.png"/>
