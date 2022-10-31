@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
          <meta property="twitter:url" content="https://www.clubedopassaporte.com/"/>
          <meta name="twitter:title" content="Clube do Passaporte - OfFuturo na Europa nunca esteve tão próximo de você."/>
          <meta name="twitter:description" content="O futuro na Europa nunca esteve tão próximo de você."/>
-         <meta name="twitter:image" content="https://www.clubedopassaporte.com.br/static/img/logo branco.png"/>
+         <meta name="twitter:image" content="https://www.clubedopassaporte.com/static/img/logo branco.png"/>
 
 
          <link rel="preconnect" href="https://fonts.gstatic.com"/>
