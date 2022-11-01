@@ -267,7 +267,7 @@ export function Visa({changePage}: VisaProps) {
    const textData = {
       title:<Flex display='inline'> passaportes e <Text display='inline' color='clubMaldivas'> vistos</Text></Flex>,
       subtitle:
-      <Flex display='inline' mx='auto'> Conte conosco para abrir as portas
+      <Flex display='inline' mx='auto'> Conte conosco para
       <Text display='inline' color='clubMaldivas'> abrir as portas </Text>
       de Portugal e da Europa para você, sua família e seus descendentes!
       </Flex>

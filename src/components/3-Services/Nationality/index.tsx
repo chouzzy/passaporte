@@ -45,7 +45,7 @@ export function Nationality({changePage}: NationalityProps) {
    const textData = {
       title:<Flex display='inline'> Nacionalidade e <Flex display='inline' color='clubMaldivas'>Cidadania</Flex></Flex>,
       subtitle:
-      <Flex display='inline' mx='auto'> Conte conosco para abrir as portas
+      <Flex display='inline' mx='auto'> Conte conosco para
       <Flex display='inline' color='clubMaldivas'> abrir as portas </Flex>
       de Portugal e da Europa para você, sua família e seus descendentes!
       </Flex>
