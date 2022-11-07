@@ -134,7 +134,7 @@ const {
             </Flex>
 
             {/* FORM */}
-            <Flex w='100%'justifyContent='center' px={[8,8,16,16]} py={[8,8,16,12]}>
+            <Flex id='#formulario' w='100%'justifyContent='center' px={[8,8,16,16]} py={[8,8,16,12]}>
             <FormControl isRequired>
                <form onSubmit={handleSubmit(onSubmit)}>
                   <FormLabel fontWeight='400' pl={2} pt={4} mb={0} htmlFor='first-name'> {formData.name}</FormLabel>
@@ -142,8 +142,12 @@ const {
                   
                   <FormLabel fontWeight='400' pl={2} pt={4} mb={0} htmlFor='telephone'> {formData.number}</FormLabel>
                   <InputGroup gap={1}>
-                  <Input type='text' w='100px' minLength={2} maxLength={3} placeholder='DDI' p={2} {...register("ddi")} />
-                  <Input type='number' w='100px' minLength={2} maxLength={3} placeholder='DDD' p={2} {...register("ddd")} />
+                  <Select isRequired id='discagem' w='300px'  _placeholder={{color:'black'}}  onChange={ (e) => setService(e.target.value)}  placeholder='Discagem'
+                  {...register("discagem")}>
+                           <option style={{ color: 'black' }}>DDD</option>
+                           <option style={{ color: 'black' }}>DDI</option>
+                  </Select>
+                  <Input isRequired={true} type='tel' w='180px' minLength={2} maxLength={3} placeholder='DDD/DDI' p={2} {...register("prefixo")} />
                   <Input type='tel' minLength={8} maxLength={9} placeholder='Ex: 912345678 ou 23456789' {...register("Numero")} />
                   <InputRightElement pointerEvents='none'>
                      <BsTelephoneFill fontSize='1.1rem' color='gray' />

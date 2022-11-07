@@ -8,18 +8,19 @@ export default async (req,res) => {
    const message = `
    E-mail recebido via clubedopassaporte.com.br: \r\n\r\n
    Nome: ${body.Nome}\r\n
-   Número: (${body.ddd}) ${body.Telefone}\r\n
+   Número: ${body.discagem}:(${body.prefixo}) ${body.Numero}\r\n
    Email: ${body.Email}\r\n
-   Serviço desejado:: ${body.service}\r\n
+   Serviço desejado: ${body.service}\r\n
    Tipo de serviço: ${body['Detalhe do serviço']}\r\n
    `;
    const data = {
-      to:'matheus@awer.co',
+      to:'clubedopassaporte@gmail.com',
       from: 'contato@awer.co',
       subject: `Contato via Site - Clube do Passaporte`,
       text: message,
       html: message.replace(/\r\n/g,'<br>')
    }
+
 
    await mail.send(data).then((response) => {
       console.log(`tentativa ${sendTest}º: ${response[0].statusCode}`)

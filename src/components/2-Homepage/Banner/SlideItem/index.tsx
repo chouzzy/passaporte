@@ -31,7 +31,7 @@ export function SlideItem({image, text, subText}:LineItemProps) {
                            <Heading maxW={['88vw','72vw','64vw','64vw']} fontWeight='500' mx='auto' color='white' textShadow='1px 1px 1px #00000060' fontSize={['1.5rem','1.7rem','2rem','2rem']}>
                               {text}
                            </Heading>
-                           <Slink to='#contato' spy={true} smooth={true} offset={-60} duration={500}>
+                           <Slink to='#formulario' spy={true} smooth={true} offset={-60} duration={500}>
                               <Button bg='clubAqua' fontWeight='400' color='white' borderRadius={'full'} _hover={{bg:'clubMoss'}}> 
                               {subText}
                               </Button>

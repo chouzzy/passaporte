@@ -56,7 +56,7 @@ export function Navbar({serviceOn, backPage}:NavbarProps) {
    {id:'#services', text:'Serviços'},
    {id:'#feedbacks', text:'Referências', offSet:feedbacksOffset},
    {id:'#namidia', text:'Na Mídia', offSet:namidiaOffset},
-   {id:'#contato', text:'Contato', offSet:contatoOffset}]
+   {id:'#formulario', text:'Contato', offSet:contatoOffset}]
 
    let socialMediaLinks = [
       {id:"instagram", instagram:'https://www.instagram.com/clubedopassaporte/'},
