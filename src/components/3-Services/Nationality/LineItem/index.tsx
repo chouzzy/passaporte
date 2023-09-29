@@ -32,9 +32,9 @@ export function LineItem({LineImage, LineName, columns, lineData, changePage}:Li
                   <Text align='center' textTransform='uppercase'>
                   {LineName}
                   </Text>
-                  <Text align='center' fontSize={'1rem'} fontWeight={400} letterSpacing={0} textAlign='center'>
+                  {/* <Text align='center' fontSize={'1rem'} fontWeight={400} letterSpacing={0} textAlign='center'>
                      Caso você não tenha ascendência portuguesa próxima, mesmo assim você pode ter direito a cidadania!
-                  </Text>
+                  </Text> */}
 
 
                   </VStack>

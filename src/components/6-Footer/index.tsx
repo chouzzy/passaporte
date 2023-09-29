@@ -53,8 +53,8 @@ useEffect(() => {
             {name: 'Visto D7'}
       ]} else if (service == 'Cidadania') {
          serviceTypeList = [
-            {name: 'Via Direta'},
-            {name: 'Sefardita'},
+            {name: 'Cidadania Portuguesa'},
+            {name: 'Cidadania Italiana'},
             {name: 'Ainda não decidi'},
          ]
       } else if (service == 'Ainda não decidi' ) {
