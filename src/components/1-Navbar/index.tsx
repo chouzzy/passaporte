@@ -67,8 +67,8 @@ export function Navbar({serviceOn, backPage}:NavbarProps) {
 
    const services = [
       {id:'#visa', name:'Vistos',offset:visaOffset},
-      {id:'#nationality', name:'Cidadania Portuguesa',offset:nationalityOffset},
-      {id:'#nationality', name:'Cidadania Italiana',offset:nationalityOffset},
+      {id:'#nationalityPortuguese', name:'Cidadania Portuguesa',offset:nationalityOffset},
+      {id:'#nationalityItalian', name:'Cidadania Italiana',offset:nationalityOffset},
    ]
 
    function handleNavbarScrollService(offset) {
