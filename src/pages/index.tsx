@@ -16,11 +16,11 @@ export default function Home() {
   const [firstOpen, setFirstOpen] = useState(true)
 
   const backgroundsList = [
-    { id: 1, image: 'static/img/popup/coliseu.png' },
-    { id: 2, image: 'static/img/popup/pizzeria.png' },
-    { id: 3, image: 'static/img/popup/positano.png' },
-    { id: 4, image: 'static/img/popup/ristorant.png' },
-    { id: 5, image: 'static/img/popup/veneza.png' },
+    { id: 1, image: 'static/img/popup/coliseu.jpg' },
+    { id: 2, image: 'static/img/popup/pizzeria.jpg' },
+    { id: 3, image: 'static/img/popup/positano.jpg' },
+    { id: 4, image: 'static/img/popup/ristorant.jpg' },
+    { id: 5, image: 'static/img/popup/veneza.jpg' },
   ]
 
   const [background, setBackground] = useState(0)
