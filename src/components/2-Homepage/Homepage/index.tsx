@@ -142,7 +142,7 @@ export function Homepage({ serviceOn, backPage, servicePageData, changePage, isO
             </Modal> */}
             {serviceOn ? <Banner />
                :
-               <ServicePage servicePageData={servicePageData} backPage={backPage} />
+               <ServicePage previousPage="" servicePageData={servicePageData} backPage={backPage} />
             }
 
          </Container>
