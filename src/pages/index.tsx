@@ -13,7 +13,7 @@ import { lines } from "../components/3-Services/Nationality/CidadaniaItalianaDat
 export default function Home() {
 
   const { isOpen, onOpen, onClose, onToggle } = useDisclosure()
-  const [firstOpen, setFirstOpen] = useState(true)
+  const [firstOpen, setFirstOpen] = useState(false)
 
   const backgroundsList = [
     { id: 1, image: 'static/img/popup/coliseu.jpg' },

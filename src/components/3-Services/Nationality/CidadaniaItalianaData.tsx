@@ -6,7 +6,9 @@ export const lines = [
     {
        image: 'static/img/positano.jpg', name: 'Nacionalidade Italiana', cols: [4, 4, 2, 2],
        lineData: {
-          mode: 'nationality', title: 'Nacionalidade Italiana', text:
+          mode: 'nationality', 
+          title: 'Nacionalidade Italiana', 
+          text:
              <Flex display='inline'>
 
                 <Text fontWeight={'600'}>

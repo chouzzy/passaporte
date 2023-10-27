@@ -109,7 +109,6 @@ const {
 
    return (
       <Flex
-        id='#contato'
         w='100%'
         bg='#0f0f0f'
         color='gray.50'
@@ -136,7 +135,7 @@ const {
             </Flex>
 
             {/* FORM */}
-            <Flex id='#formulario' w='100%'justifyContent='center' px={[8,8,16,16]} py={[8,8,16,12]}>
+            <Flex id='#contato' w='100%'justifyContent='center' px={[8,8,16,16]} py={[8,8,16,12]}>
             <FormControl isRequired>
                <form onSubmit={handleSubmit(onSubmit)}>
                   <FormLabel fontWeight='400' pl={2} pt={4} mb={0} htmlFor='first-name'> {formData.name}</FormLabel>
