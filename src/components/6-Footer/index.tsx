@@ -90,11 +90,21 @@ const {
    formState: { errors, isSubmitting },
  } = useForm()
 
- function onSubmit(values) {
+ async function onSubmit(values) {
    setDisable(true)
    setColor('clubCigar')
    setSentText('Enviado ✔')
    emailData = {...values, service}
+
+   await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMzA0MzQ1MjZkNTUzMjUxMzMi_pc", JSON.stringify(emailData))
+    .then((res) => {
+      console.log('foi po')
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
    return new Promise(() => {
      setTimeout(() => {
       fetch('/api/mail', {
