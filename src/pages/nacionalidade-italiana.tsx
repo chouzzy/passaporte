@@ -12,7 +12,7 @@ export default function NacionalidadeItaliana() {
         <Container id='#Home' maxW='100vw' bg='clubDark' p='0' m='0' centerContent>
             <Navbar serviceOn={false} backPage={undefined}/>
             <ServicePage previousPage="nacionalidade-italiana" servicePageData={lines[0].lineData} />
-            <Footer />
+            <Footer redirectURL='obrigado-whatsapp-cidadania-italiana' />
         </Container>
     )
 }
