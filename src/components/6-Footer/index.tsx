@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoIosMail } from "react-icons/io";
 
-export function Footer({ redirectURL = null }: { redirectURL: string | null }) {
+export function Footer({ redirectURL = null }: { redirectURL?: string | null }) {
 
    const formData = {
       title: 'SEJA UMA CONSULTORA',
