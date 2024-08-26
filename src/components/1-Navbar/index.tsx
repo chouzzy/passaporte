@@ -21,7 +21,7 @@ interface NavbarProps {
 }
 
 export function Navbar({ serviceOn, backPage }: NavbarProps) {
-   const [whatsNumber, setWhatsNumber] = useState('5511930003573')
+   const [whatsNumber, setWhatsNumber] = useState('5511966056452')
    const { isOpen, onOpen, onClose } = useDisclosure()
    // useEffect(() => {
    //    const fetchWhatsNumber = async () => {
